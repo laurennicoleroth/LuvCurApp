@@ -303,8 +303,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="LuvCur" id="faF-DA-jmk">
-                        <barButtonItem key="leftBarButtonItem" image="btn_menu" id="srs-dL-qNk"/>
-                        <barButtonItem key="rightBarButtonItem" image="chat-header" id="fdF-dE-TWL"/>
+                        <barButtonItem key="leftBarButtonItem" image="btn_menu" id="srs-dL-qNk">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="chat-header" id="fdF-dE-TWL">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK7-Jg-QMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
