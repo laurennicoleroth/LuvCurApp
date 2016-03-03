@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1A91C88D5750098D151 /* AppDelegate.swift */; };
+		96CAB1AC1C88D5750098D151 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1AB1C88D5750098D151 /* ViewController.swift */; };
+		96CAB1AF1C88D5750098D151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CAB1AD1C88D5750098D151 /* Main.storyboard */; };
+		96CAB1B11C88D5750098D151 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CAB1B01C88D5750098D151 /* Assets.xcassets */; };
+		96CAB1B41C88D5760098D151 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CAB1B21C88D5760098D151 /* LaunchScreen.storyboard */; };
+		96CAB1BF1C88D5760098D151 /* LuvCurAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1BE1C88D5760098D151 /* LuvCurAppTests.swift */; };
+		96CAB1CA1C88D5760098D151 /* LuvCurAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1C91C88D5760098D151 /* LuvCurAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96CAB1BB1C88D5760098D151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CAB19E1C88D5750098D151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CAB1A51C88D5750098D151;
+			remoteInfo = LuvCurApp;
+		};
+		96CAB1C61C88D5760098D151 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CAB19E1C88D5750098D151 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CAB1A51C88D5750098D151;
+			remoteInfo = LuvCurApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		96CAB1A61C88D5750098D151 /* LuvCurApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuvCurApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CAB1A91C88D5750098D151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96CAB1AB1C88D5750098D151 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		96CAB1AE1C88D5750098D151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		96CAB1B01C88D5750098D151 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96CAB1B31C88D5760098D151 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96CAB1B51C88D5760098D151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CAB1BA1C88D5760098D151 /* LuvCurAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuvCurAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CAB1BE1C88D5760098D151 /* LuvCurAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuvCurAppTests.swift; sourceTree = "<group>"; };
+		96CAB1C01C88D5760098D151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CAB1C51C88D5760098D151 /* LuvCurAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuvCurAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CAB1C91C88D5760098D151 /* LuvCurAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuvCurAppUITests.swift; sourceTree = "<group>"; };
+		96CAB1CB1C88D5760098D151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CAB1A31C88D5750098D151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1B71C88D5760098D151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1C21C88D5760098D151 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96CAB19D1C88D5750098D151 = {
+			isa = PBXGroup;
+			children = (
+				96CAB1A81C88D5750098D151 /* LuvCurApp */,
+				96CAB1BD1C88D5760098D151 /* LuvCurAppTests */,
+				96CAB1C81C88D5760098D151 /* LuvCurAppUITests */,
+				96CAB1A71C88D5750098D151 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96CAB1A71C88D5750098D151 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CAB1A61C88D5750098D151 /* LuvCurApp.app */,
+				96CAB1BA1C88D5760098D151 /* LuvCurAppTests.xctest */,
+				96CAB1C51C88D5760098D151 /* LuvCurAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96CAB1A81C88D5750098D151 /* LuvCurApp */ = {
+			isa = PBXGroup;
+			children = (
+				96CAB1A91C88D5750098D151 /* AppDelegate.swift */,
+				96CAB1AB1C88D5750098D151 /* ViewController.swift */,
+				96CAB1AD1C88D5750098D151 /* Main.storyboard */,
+				96CAB1B01C88D5750098D151 /* Assets.xcassets */,
+				96CAB1B21C88D5760098D151 /* LaunchScreen.storyboard */,
+				96CAB1B51C88D5760098D151 /* Info.plist */,
+			);
+			path = LuvCurApp;
+			sourceTree = "<group>";
+		};
+		96CAB1BD1C88D5760098D151 /* LuvCurAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CAB1BE1C88D5760098D151 /* LuvCurAppTests.swift */,
+				96CAB1C01C88D5760098D151 /* Info.plist */,
+			);
+			path = LuvCurAppTests;
+			sourceTree = "<group>";
+		};
+		96CAB1C81C88D5760098D151 /* LuvCurAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96CAB1C91C88D5760098D151 /* LuvCurAppUITests.swift */,
+				96CAB1CB1C88D5760098D151 /* Info.plist */,
+			);
+			path = LuvCurAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CAB1A51C88D5750098D151 /* LuvCurApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CAB1CE1C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurApp" */;
+			buildPhases = (
+				96CAB1A21C88D5750098D151 /* Sources */,
+				96CAB1A31C88D5750098D151 /* Frameworks */,
+				96CAB1A41C88D5750098D151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuvCurApp;
+			productName = LuvCurApp;
+			productReference = 96CAB1A61C88D5750098D151 /* LuvCurApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96CAB1B91C88D5760098D151 /* LuvCurAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CAB1D11C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurAppTests" */;
+			buildPhases = (
+				96CAB1B61C88D5760098D151 /* Sources */,
+				96CAB1B71C88D5760098D151 /* Frameworks */,
+				96CAB1B81C88D5760098D151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CAB1BC1C88D5760098D151 /* PBXTargetDependency */,
+			);
+			name = LuvCurAppTests;
+			productName = LuvCurAppTests;
+			productReference = 96CAB1BA1C88D5760098D151 /* LuvCurAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96CAB1C41C88D5760098D151 /* LuvCurAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CAB1D41C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurAppUITests" */;
+			buildPhases = (
+				96CAB1C11C88D5760098D151 /* Sources */,
+				96CAB1C21C88D5760098D151 /* Frameworks */,
+				96CAB1C31C88D5760098D151 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CAB1C71C88D5760098D151 /* PBXTargetDependency */,
+			);
+			name = LuvCurAppUITests;
+			productName = LuvCurAppUITests;
+			productReference = 96CAB1C51C88D5760098D151 /* LuvCurAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96CAB19E1C88D5750098D151 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = LuvCurApp;
+				TargetAttributes = {
+					96CAB1A51C88D5750098D151 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = K8HU92W3ZM;
+					};
+					96CAB1B91C88D5760098D151 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 96CAB1A51C88D5750098D151;
+					};
+					96CAB1C41C88D5760098D151 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 96CAB1A51C88D5750098D151;
+					};
+				};
+			};
+			buildConfigurationList = 96CAB1A11C88D5750098D151 /* Build configuration list for PBXProject "LuvCurApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96CAB19D1C88D5750098D151;
+			productRefGroup = 96CAB1A71C88D5750098D151 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CAB1A51C88D5750098D151 /* LuvCurApp */,
+				96CAB1B91C88D5760098D151 /* LuvCurAppTests */,
+				96CAB1C41C88D5760098D151 /* LuvCurAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CAB1A41C88D5750098D151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CAB1B41C88D5760098D151 /* LaunchScreen.storyboard in Resources */,
+				96CAB1B11C88D5750098D151 /* Assets.xcassets in Resources */,
+				96CAB1AF1C88D5750098D151 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1B81C88D5760098D151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1C31C88D5760098D151 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CAB1A21C88D5750098D151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CAB1AC1C88D5750098D151 /* ViewController.swift in Sources */,
+				96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1B61C88D5760098D151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CAB1BF1C88D5760098D151 /* LuvCurAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CAB1C11C88D5760098D151 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CAB1CA1C88D5760098D151 /* LuvCurAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96CAB1BC1C88D5760098D151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CAB1A51C88D5750098D151 /* LuvCurApp */;
+			targetProxy = 96CAB1BB1C88D5760098D151 /* PBXContainerItemProxy */;
+		};
+		96CAB1C71C88D5760098D151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CAB1A51C88D5750098D151 /* LuvCurApp */;
+			targetProxy = 96CAB1C61C88D5760098D151 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96CAB1AD1C88D5750098D151 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CAB1AE1C88D5750098D151 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		96CAB1B21C88D5760098D151 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96CAB1B31C88D5760098D151 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96CAB1CC1C88D5760098D151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96CAB1CD1C88D5760098D151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CAB1CF1C88D5760098D151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LuvCurApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		96CAB1D01C88D5760098D151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = LuvCurApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		96CAB1D21C88D5760098D151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuvCurAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp.LuvCurAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuvCurApp.app/LuvCurApp";
+			};
+			name = Debug;
+		};
+		96CAB1D31C88D5760098D151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuvCurAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp.LuvCurAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuvCurApp.app/LuvCurApp";
+			};
+			name = Release;
+		};
+		96CAB1D51C88D5760098D151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LuvCurAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp.LuvCurAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LuvCurApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		96CAB1D61C88D5760098D151 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = LuvCurAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.LuvCurApp.LuvCurAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LuvCurApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CAB1A11C88D5750098D151 /* Build configuration list for PBXProject "LuvCurApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CAB1CC1C88D5760098D151 /* Debug */,
+				96CAB1CD1C88D5760098D151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CAB1CE1C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CAB1CF1C88D5760098D151 /* Debug */,
+				96CAB1D01C88D5760098D151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96CAB1D11C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CAB1D21C88D5760098D151 /* Debug */,
+				96CAB1D31C88D5760098D151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		96CAB1D41C88D5760098D151 /* Build configuration list for PBXNativeTarget "LuvCurAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CAB1D51C88D5760098D151 /* Debug */,
+				96CAB1D61C88D5760098D151 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96CAB19E1C88D5750098D151 /* Project object */;
+}
