@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         
         if DEFAULTS.valueForKey(KEY_UID) != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
+            // self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
         }
     }
     
@@ -129,6 +129,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             showErrorAlert("Missing Something?", msg: "You must enter an email and a password.")
         }
         
+    }
+    
+    //MARK: Signup
+    
+    @IBAction func signupButtonTapped(sender: AnyObject) {
+        print("Sign up button tapped")
+        self.performSegueWithIdentifier(SEGUE_SIGNUP, sender: nil)
     }
     
     //-------------------

@@ -16,6 +16,7 @@ let KEY_UID = "uid"
 
 // MARK: - Segues
 let SEGUE_LOGGEDIN = "loggedIn"
+let SEGUE_SIGNUP = "signup"
 
 // MARK: - Status Codes
 let STATUS_ACCOUNT_NOTEXIST = -8
