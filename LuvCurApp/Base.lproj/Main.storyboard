@@ -271,7 +271,7 @@
     <resources>
         <image name="facebook" width="76" height="76"/>
         <image name="googlePlus" width="76" height="76"/>
-        <image name="twitter" width="21" height="21"/>
-        <image name="user" width="21" height="21"/>
+        <image name="twitter" width="76" height="76"/>
+        <image name="user" width="300" height="300"/>
     </resources>
 </document>
