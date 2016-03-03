@@ -31,8 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         
         if DEFAULTS.valueForKey(KEY_UID) != nil {
-//            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
-            print("key for user is not nil")
+            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
         }
     }
     
@@ -167,7 +166,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         
                         // Create a new firebase user if they used facebook to sign up
-                        let user = ["provider": authData.provider!, "blah": "swa"]
+                        let user = ["provider": authData.provider!, "bio": "about me" ]
                         FirebaseDataSingleton.ds.createFirebaseUser(authData.uid, user: user)
                         
                         // move to new VC after logging in

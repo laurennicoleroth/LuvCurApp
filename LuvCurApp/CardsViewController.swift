@@ -25,10 +25,11 @@ class CardsViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(users.first)
-        
         let cardStack = CardStackView(frame: self.frontCardViewFrame())
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame
+        
+        self.navigationController?.navigationBar.topItem?.title = "LuvCur"
+//        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "NotoSans", size: 34)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         cardStack.reloadContent()
         

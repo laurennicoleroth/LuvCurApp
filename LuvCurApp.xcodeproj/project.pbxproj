@@ -86,6 +86,10 @@
 		96F987F11C88E1F600E70665 /* SwipeResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeResult.swift; sourceTree = "<group>"; };
 		96F987F21C88E1F600E70665 /* SwipeDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeDirection.swift; sourceTree = "<group>"; };
 		96F987F31C88E1F600E70665 /* SwipeViewState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewState.swift; sourceTree = "<group>"; };
+		96F987FC1C88F76500E70665 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
+		96F987FD1C88F76500E70665 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		96F987FE1C88F76500E70665 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
+		96F987FF1C88F76500E70665 /* NotoSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Regular.ttf"; sourceTree = "<group>"; };
 		B90E3086CB14C55364567E54 /* Pods-LuvCurApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuvCurApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuvCurApp/Pods-LuvCurApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,6 +190,7 @@
 		96F987D11C88DC0F00E70665 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				96F987FB1C88F75500E70665 /* Fonts */,
 				96F987EC1C88E1EB00E70665 /* Cards */,
 				96F987D51C88E01400E70665 /* Login/Signup */,
 				96CAB1AD1C88D5750098D151 /* Main.storyboard */,
@@ -249,6 +254,17 @@
 				96F987F31C88E1F600E70665 /* SwipeViewState.swift */,
 			);
 			name = Cards;
+			sourceTree = "<group>";
+		};
+		96F987FB1C88F75500E70665 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				96F987FC1C88F76500E70665 /* NotoSans-Bold.ttf */,
+				96F987FD1C88F76500E70665 /* NotoSans-BoldItalic.ttf */,
+				96F987FE1C88F76500E70665 /* NotoSans-Italic.ttf */,
+				96F987FF1C88F76500E70665 /* NotoSans-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
