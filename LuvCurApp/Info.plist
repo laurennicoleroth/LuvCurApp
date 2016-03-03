@@ -49,12 +49,13 @@
             <dict>
                 <key>CFBundleURLSchemes</key>
                 <array>
-                    <string>fb990361154363296</string>
+                    <string>fb106226026438461</string>
+                    <string>fbauth2</string>
                 </array>
             </dict>
         </array>
         <key>FacebookAppID</key>
-        <string>990361154363296</string>
+        <string>106226026438461</string>
         <key>FacebookDisplayName</key>
         <string>LuvCurApp</string>
         

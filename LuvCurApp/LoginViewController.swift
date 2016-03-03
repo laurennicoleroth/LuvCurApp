@@ -31,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         
         if DEFAULTS.valueForKey(KEY_UID) != nil {
-            //            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
+//            self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
             print("key for user is not nil")
         }
     }
@@ -148,7 +148,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // create new instance of facebookLogin
         let facebookLogin = FBSDKLoginManager()
         
-        facebookLogin.logInWithReadPermissions(["email"], fromViewController:self, handler: { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: self, handler: { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: NSError!) -> Void in
             
             if facebookError != nil {
                 print("Facebook login failed. Error \(facebookError)")

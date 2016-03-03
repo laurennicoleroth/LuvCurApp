@@ -256,6 +256,7 @@
                         <outlet property="textFieldEmail" destination="M2P-hA-CBt" id="OIH-io-h0M"/>
                         <outlet property="textFieldPassword" destination="LEL-kt-7IL" id="ZJP-nK-tmd"/>
                         <outlet property="viewSocialBtns" destination="tfg-Sb-4dc" id="AlR-hh-s9Y"/>
+                        <segue destination="NgA-FJ-iKQ" kind="show" identifier="loggedIn" id="BOP-9s-3O9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mif-Ls-Q62" sceneMemberID="firstResponder"/>
@@ -266,6 +267,43 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="336" y="361"/>
+        </scene>
+        <!--LuvCur-->
+        <scene sceneID="liw-Tt-MMW">
+            <objects>
+                <viewController id="2sx-ma-XDN" customClass="CardsViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E7H-4K-hxl"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Vj-Ji-4ix"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4f-iI-Qrj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LuvCur" id="faF-DA-jmk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WK7-Jg-QMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1949" y="361"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="peQ-Cd-lNn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgA-FJ-iKQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="swF-Ta-j5P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2sx-ma-XDN" kind="relationship" relationship="rootViewController" id="fLw-yD-TYd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02t-4R-vsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="361"/>
         </scene>
     </scenes>
     <resources>

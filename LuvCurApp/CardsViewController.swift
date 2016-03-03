@@ -11,7 +11,7 @@ import Firebase
 
 class CardsViewController: UIViewController
 {
-    let firebase = Firebase(url:"https://luvcurios.firebaseio.com/")
+    let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
     var users : [User] = [
         User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
         User(name: "Megan Fox", bio: "Actor", image: UIImage(named: "cards_2")!, username: "meganfox"),

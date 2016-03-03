@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-let URL_BASE = "https://luvcurios.firebaseio.com/"
+let URL_BASE = "https://luvcurapp.firebaseio.com"
 
 class FirebaseDataSingleton {
     // create a static variable with only one instance in memory and it's globally accessible
