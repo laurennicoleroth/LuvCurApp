@@ -134,7 +134,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: Signup
     
     @IBAction func signupButtonTapped(sender: AnyObject) {
-        print("Sign up button tapped")
         self.performSegueWithIdentifier(SEGUE_SIGNUP, sender: nil)
     }
     

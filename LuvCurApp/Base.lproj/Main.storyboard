@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -98,7 +99,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginSignupButtonTapped:" destination="0OT-Or-qge" eventType="touchUpInside" id="VHv-oK-t8P"/>
-                                    <segue destination="p8v-qN-5sw" kind="show" identifier="signup" id="Znw-cg-rET"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-Sb-4dc">
@@ -211,6 +211,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="signupButtonTapped:" destination="0OT-Or-qge" eventType="touchUpInside" id="sMq-Rj-vkm"/>
+                                    <segue destination="ibF-1s-92m" kind="show" identifier="signup" id="WEQ-MA-vL6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -317,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK7-Jg-QMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2761" y="361"/>
+            <point key="canvasLocation" x="1892" y="492"/>
         </scene>
         <!--Signup View Controller-->
         <scene sceneID="DGC-MY-ae4">
@@ -334,17 +335,47 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-o9-VSN" customClass="OLNGradientView" customModule="LuvCurApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-MO-GHF">
-                                        <rect key="frame" x="237" y="110" width="128" height="48"/>
-                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Email address" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="n9X-w1-imN" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
-                                        <rect key="frame" x="196" y="237" width="208" height="26"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="L4z-kB-lli" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
+                                        <rect key="frame" x="196" y="323" width="208" height="26"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="0OT-Or-qge" id="Yjo-iH-m9o"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUt-UI-ido">
+                                        <rect key="frame" x="22" y="26" width="21" height="22"/>
+                                        <state key="normal" image="btn_undo"/>
+                                        <connections>
+                                            <segue destination="0OT-Or-qge" kind="show" id="oJe-XL-4hr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Username" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="0Y4-bu-pRf" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
+                                        <rect key="frame" x="196" y="281" width="208" height="26"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="RtQ-CD-kkt"/>
+                                            <constraint firstAttribute="width" constant="208" id="Knk-S2-7BN"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="0OT-Or-qge" id="2xM-c8-RpZ"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Email address" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="n9X-w1-imN" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
+                                        <rect key="frame" x="196" y="239" width="208" height="26"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="208" id="ye8-Kd-4rF"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
@@ -356,81 +387,41 @@
                                             <outlet property="delegate" destination="0OT-Or-qge" id="0pg-qO-8Bv"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="L4z-kB-lli" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
-                                        <rect key="frame" x="196" y="280" width="208" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="krH-oQ-XLE"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
-                                        </variation>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YeY-MO-GHF">
+                                        <rect key="frame" x="236" y="26" width="128" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO0-hT-tfe">
+                                        <rect key="frame" x="276" y="371" width="48" height="30"/>
+                                        <state key="normal" title="Signup"/>
                                         <connections>
-                                            <outlet property="delegate" destination="0OT-Or-qge" id="Yjo-iH-m9o"/>
+                                            <action selector="signupButtonTouched" destination="ibF-1s-92m" eventType="touchUpInside" id="qJR-P3-JJs"/>
                                         </connections>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" allowsEditingTextAttributes="YES" placeholder="Repeat Password" textAlignment="center" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="G2p-39-e4a" customClass="OLNThinTextField" customModule="LuvCurApp" customModuleProvider="target">
-                                        <rect key="frame" x="197" y="326" width="208" height="26"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="208" id="iJZ-9a-AkM"/>
-                                        </constraints>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="22"/>
-                                        </variation>
-                                        <connections>
-                                            <outlet property="delegate" destination="0OT-Or-qge" id="ejb-Qw-vOv"/>
-                                        </connections>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBM-9S-T3l">
-                                        <rect key="frame" x="216" y="314" width="168" height="38"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="38" id="6lS-KP-roJ"/>
-                                            <constraint firstAttribute="width" constant="168" id="MIv-Tt-SAn"/>
-                                        </constraints>
-                                    </view>
-                                    <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGA-oI-reb">
-                                        <rect key="frame" x="241" y="373" width="120" height="38"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="dgj-yG-etb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                        <state key="normal" title="SIGNUP">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" red="0.26943403389999998" green="0.34509587470000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="19"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="G2p-39-e4a" firstAttribute="centerY" secondItem="IKW-o9-VSN" secondAttribute="centerY" constant="39" id="3a3-ff-ivF"/>
-                                    <constraint firstItem="n9X-w1-imN" firstAttribute="centerX" secondItem="IKW-o9-VSN" secondAttribute="centerX" id="5HK-y8-Onn"/>
-                                    <constraint firstItem="UGA-oI-reb" firstAttribute="trailing" secondItem="YeY-MO-GHF" secondAttribute="trailing" constant="-4" id="9Wx-wb-jbc"/>
-                                    <constraint firstItem="UGA-oI-reb" firstAttribute="leading" secondItem="YeY-MO-GHF" secondAttribute="leading" constant="4" id="CFf-ud-GEK"/>
-                                    <constraint firstItem="YeY-MO-GHF" firstAttribute="centerX" secondItem="IKW-o9-VSN" secondAttribute="centerX" constant="1" id="Clh-Tp-io2"/>
+                                    <constraint firstItem="JUt-UI-ido" firstAttribute="top" secondItem="IKW-o9-VSN" secondAttribute="top" constant="26" id="0N6-Rj-Xh2"/>
+                                    <constraint firstItem="0Y4-bu-pRf" firstAttribute="trailing" secondItem="L4z-kB-lli" secondAttribute="trailing" id="0xI-tO-yT8"/>
+                                    <constraint firstItem="0Y4-bu-pRf" firstAttribute="leading" secondItem="L4z-kB-lli" secondAttribute="leading" id="3Z2-o6-T8K"/>
+                                    <constraint firstItem="0Y4-bu-pRf" firstAttribute="top" secondItem="YeY-MO-GHF" secondAttribute="bottom" constant="40" id="6EE-wl-zbh"/>
+                                    <constraint firstItem="L4z-kB-lli" firstAttribute="top" secondItem="0Y4-bu-pRf" secondAttribute="bottom" constant="16" id="8G6-Ge-uSC"/>
+                                    <constraint firstItem="n9X-w1-imN" firstAttribute="top" secondItem="0Y4-bu-pRf" secondAttribute="bottom" constant="13" id="8Ld-on-fGS"/>
+                                    <constraint firstItem="L4z-kB-lli" firstAttribute="top" secondItem="0Y4-bu-pRf" secondAttribute="bottom" constant="18" id="9Fc-jB-oym"/>
+                                    <constraint firstItem="YeY-MO-GHF" firstAttribute="centerX" secondItem="0Y4-bu-pRf" secondAttribute="centerX" id="9LV-mG-j5h"/>
+                                    <constraint firstItem="L4z-kB-lli" firstAttribute="centerX" secondItem="IKW-o9-VSN" secondAttribute="centerX" id="BOZ-zw-SWd"/>
+                                    <constraint firstItem="n9X-w1-imN" firstAttribute="leading" secondItem="0Y4-bu-pRf" secondAttribute="leading" id="FB0-hX-LFo"/>
                                     <constraint firstItem="L4z-kB-lli" firstAttribute="top" secondItem="n9X-w1-imN" secondAttribute="bottom" constant="17" id="FTs-v5-dxi"/>
-                                    <constraint firstItem="SBM-9S-T3l" firstAttribute="centerX" secondItem="IKW-o9-VSN" secondAttribute="centerX" id="MPS-MV-tXa"/>
-                                    <constraint firstItem="SBM-9S-T3l" firstAttribute="top" secondItem="L4z-kB-lli" secondAttribute="bottom" constant="8" id="ZAm-xq-1qv"/>
+                                    <constraint firstItem="0Y4-bu-pRf" firstAttribute="top" secondItem="n9X-w1-imN" secondAttribute="bottom" constant="16" id="K7F-uY-Ri1"/>
+                                    <constraint firstItem="YeY-MO-GHF" firstAttribute="top" secondItem="JUt-UI-ido" secondAttribute="top" id="Ml5-xx-dbf"/>
+                                    <constraint firstItem="JUt-UI-ido" firstAttribute="leading" secondItem="IKW-o9-VSN" secondAttribute="leadingMargin" constant="14" id="WAh-1o-uwD"/>
+                                    <constraint firstItem="n9X-w1-imN" firstAttribute="top" secondItem="IKW-o9-VSN" secondAttribute="top" constant="239" id="ZlP-qc-bTl"/>
                                     <constraint firstItem="n9X-w1-imN" firstAttribute="top" secondItem="YeY-MO-GHF" secondAttribute="bottom" constant="79" id="cDv-7q-sty"/>
-                                    <constraint firstItem="SBM-9S-T3l" firstAttribute="top" secondItem="L4z-kB-lli" secondAttribute="bottom" constant="8" id="ghh-Bw-9NY"/>
-                                    <constraint firstItem="UGA-oI-reb" firstAttribute="top" secondItem="L4z-kB-lli" secondAttribute="bottom" constant="67" id="hTO-wF-EGH"/>
-                                    <constraint firstItem="L4z-kB-lli" firstAttribute="centerX" secondItem="IKW-o9-VSN" secondAttribute="centerX" id="id9-jz-t5P"/>
-                                    <constraint firstItem="SBM-9S-T3l" firstAttribute="bottom" secondItem="G2p-39-e4a" secondAttribute="bottom" id="ihP-jr-L40"/>
-                                    <constraint firstItem="G2p-39-e4a" firstAttribute="centerX" secondItem="UGA-oI-reb" secondAttribute="centerX" id="kJ5-G6-07Y"/>
+                                    <constraint firstItem="0Y4-bu-pRf" firstAttribute="top" secondItem="n9X-w1-imN" secondAttribute="bottom" constant="8" id="iK6-fb-1Ag"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
@@ -440,21 +431,39 @@
                                         <color key="value" red="0.85892855420000003" green="0.1471166683" blue="0.99749447599999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Ld-on-fGS"/>
+                                        <exclude reference="cDv-7q-sty"/>
+                                        <exclude reference="6EE-wl-zbh"/>
+                                        <exclude reference="iK6-fb-1Ag"/>
+                                        <exclude reference="9Fc-jB-oym"/>
+                                        <exclude reference="FTs-v5-dxi"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IKW-o9-VSN" firstAttribute="top" secondItem="MKH-ps-cX4" secondAttribute="top" id="EnI-sW-wRG"/>
-                            <constraint firstAttribute="trailing" secondItem="IKW-o9-VSN" secondAttribute="trailing" id="arj-bF-O56"/>
-                            <constraint firstItem="IKW-o9-VSN" firstAttribute="leading" secondItem="MKH-ps-cX4" secondAttribute="leading" id="e1a-MI-5B5"/>
-                            <constraint firstItem="IKW-o9-VSN" firstAttribute="bottom" secondItem="hIh-yh-OdV" secondAttribute="top" id="i1N-vN-Rqj"/>
+                            <constraint firstAttribute="trailing" secondItem="IKW-o9-VSN" secondAttribute="trailing" id="aup-xt-0KI"/>
+                            <constraint firstItem="IKW-o9-VSN" firstAttribute="bottom" secondItem="hIh-yh-OdV" secondAttribute="top" id="j0U-VW-RWp"/>
+                            <constraint firstItem="IKW-o9-VSN" firstAttribute="leading" secondItem="MKH-ps-cX4" secondAttribute="leading" id="rYF-81-Tel"/>
+                            <constraint firstItem="IKW-o9-VSN" firstAttribute="top" secondItem="MKH-ps-cX4" secondAttribute="top" id="vvn-jq-GcE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tQk-82-513"/>
+                    <navigationItem key="navigationItem" id="tQk-82-513">
+                        <barButtonItem key="leftBarButtonItem" image="btn_undo" id="cM0-uo-g4n"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="n9X-w1-imN" id="TTy-oW-ZDl"/>
+                        <outlet property="passwordTextField" destination="L4z-kB-lli" id="Ws2-j3-oVt"/>
+                        <outlet property="usernameTextField" destination="0Y4-bu-pRf" id="rYI-KD-6pz"/>
+                        <segue destination="2sx-ma-XDN" kind="show" identifier="newUserLoggedIn" id="rdN-64-sZW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pIu-f3-Oij" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1939" y="765"/>
+            <point key="canvasLocation" x="1122" y="754"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="peQ-Cd-lNn">
@@ -475,32 +484,17 @@
             </objects>
             <point key="canvasLocation" x="1127" y="90"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nBe-AT-7wh">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="STC-eR-Vfy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p8v-qN-5sw" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="IGo-bj-3v2">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ibF-1s-92m" kind="relationship" relationship="rootViewController" id="eif-4f-HS0"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="1127" y="765"/>
-        </scene>
     </scenes>
     <resources>
         <image name="btn_menu" width="21" height="21"/>
+        <image name="btn_undo" width="21" height="21"/>
         <image name="chat-header" width="29" height="23"/>
         <image name="facebook" width="76" height="76"/>
         <image name="googlePlus" width="76" height="76"/>
         <image name="twitter" width="76" height="76"/>
         <image name="user" width="300" height="300"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rdN-64-sZW"/>
+    </inferredMetricsTieBreakers>
 </document>
