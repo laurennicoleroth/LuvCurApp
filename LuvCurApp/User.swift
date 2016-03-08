@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import Firebase
 
 class User {
     var name : String?
@@ -17,7 +16,7 @@ class User {
     var image : UIImage?
     var username : String?
     
-    let firebaseRef = FirebaseDataSingleton()
+    let firebaseRef = FirebaseDataService()
     
     // create an initializer
     init(name: String, bio: String, image: UIImage?, username: String) {
@@ -35,7 +34,7 @@ class User {
         data = UIImageJPEGRepresentation(image!, 0.1)!
         let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
         let user: NSDictionary = ["username": username!, "photoBase64":base64String]
-        let profile = firebaseRef.REF_USERS
+        let profile = firebaseRef.USER_REF
         profile.setValue(user)
     }
     

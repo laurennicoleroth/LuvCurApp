@@ -19,6 +19,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var labelUserName: UILabel!
     var buttonSelected: OLNSocialButton?
     
+    var email : String? = "" {
+        didSet {
+            if email != nil {
+                print(email)
+            } else {
+                print("Email is nil")
+            }
+        }
+    }
+    var password : String? = "" {
+        didSet {
+            if password != nil {
+                print(password)
+            } else {
+                print("Password is nil")
+            }
+        }
+    }
+    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +49,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if DEFAULTS.valueForKey(KEY_UID) != nil {
-            // self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
+        if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && FirebaseDataService.dataService.CURRENT_USER_REF.authData != nil {
+            self.performSegueWithIdentifier("loggedIn", sender: nil)
         }
     }
     
@@ -83,7 +102,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if let email = textFieldEmail.text where email != "", let password = textFieldPassword.text where password != "" {
             
             // login/authenticate a user
-            FirebaseDataSingleton.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: { error, authData in
+            FirebaseDataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
                 
                 if error != nil {
                     
@@ -93,7 +112,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     // Handle error if account doesn't exist
                     if error.code == STATUS_ACCOUNT_NOTEXIST {
                         // Create a new user account
-                        FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password, withValueCompletionBlock: { error, result in
+                        FirebaseDataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
                             
                             if error != nil {
                                 self.showErrorAlert("Could not create account", msg: "Make sure your information is correct.")
@@ -102,12 +121,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                 // log in user
                                 DEFAULTS.setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-                                FirebaseDataSingleton.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: { err, authData in
+                                FirebaseDataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { err, authData in
                                     
                                     // Create a new firebase user if they used email to sign up
                                     let user = ["provider": authData.provider!]
-                                    FirebaseDataSingleton.ds.createFirebaseUser(authData.uid, user: user)
-                                    
+                                    FirebaseDataService.dataService.createNewAccount(authData.uid, user: user)
                                 })
                                 
                                 self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
@@ -134,22 +152,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //MARK: Signup
     
     @IBAction func signUpNewUser() {
-        let email = textFieldEmail.text
-        let password = textFieldPassword.text
-        let user_ref = FirebaseDataSingleton.ds.REF_BASE
-        print(user_ref)
+        self.email = textFieldEmail.text!
+        self.password = textFieldPassword.text!
         
         if email != "" && password != "" {
-            user_ref.createUser(email!, password: password!,
-                withValueCompletionBlock: { error, result in
-                    if error != nil {
-                        print("There was an error creating the user: \(error)")
-                    } else {
-                        let uid = result["uid"] as? String
-                        print("Successfully created user account with uid: \(uid)")
-                        print(result)
-                    }
-            })
+            print("valid")
+            
         }
     }
     
@@ -187,7 +195,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("successfully logged in with facebook \(accessToken)")
                 
-                FirebaseDataSingleton.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                FirebaseDataService.dataService.BASE_REF.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
                     
                     // store on our device the token/session of our user when they log in w Facebook
                     if error != nil {
@@ -199,7 +207,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         // Create a new firebase user if they used facebook to sign up
                         let user = ["provider": authData.provider!, "bio": "about me" ]
-                        FirebaseDataSingleton.ds.createFirebaseUser(authData.uid, user: user)
+                        FirebaseDataService.dataService.createNewAccount(authData.uid, user: user)
                         
                         // move to new VC after logging in
                         self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)

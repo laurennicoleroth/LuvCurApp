@@ -26,7 +26,7 @@ class SignupViewController: UIViewController
             
             // Set Email and Password for the New User.
             
-            FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password, withValueCompletionBlock: { error, result in
+            FirebaseDataService.dataService.USER_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
                 
                 if error != nil {
                     print(error)
@@ -36,10 +36,10 @@ class SignupViewController: UIViewController
                 } else {
                     
                     // Create and Login the New User with authUser
-                    FirebaseDataSingleton.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: {
+                    FirebaseDataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: {
                         err, authData in
                         
-                        FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password,
+                        FirebaseDataService.dataService.BASE_REF.createUser(email, password: password,
                             withValueCompletionBlock: { error, result in
                                 if error != nil {
                                     // There was an error creating the account

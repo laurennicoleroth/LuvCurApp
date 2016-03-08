@@ -11,33 +11,33 @@ import Firebase
 
 let URL_BASE = "https://luvcurapp.firebaseio.com"
 
-class FirebaseDataSingleton {
+class FirebaseDataService {
     // create a static variable with only one instance in memory and it's globally accessible
-    static let ds = FirebaseDataSingleton()
+    static let dataService = FirebaseDataService()
     
-    private var _REF_BASE = Firebase(url: "\(URL_BASE)")
-    private var _REF_USERS = Firebase(url: "\(URL_BASE)/Users")
+    private var _BASE_REF = Firebase(url: "\(URL_BASE)")
+    private var _USER_REF = Firebase(url: "\(URL_BASE)/Users")
     
-    // For good code practice, create public variables to return private variables
-    var REF_BASE: Firebase {
-        return _REF_BASE
+    var BASE_REF: Firebase {
+        return _BASE_REF
     }
     
-    var REF_USERS: Firebase {
-        return _REF_USERS
+    var USER_REF: Firebase {
+        return _USER_REF
     }
     
-    var REF_USER_CURRENT: Firebase {
-        let uid = NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) as! String
-        // OR: let user = Firebase(url: "\(URL_BASE)/Users")
-        let user = Firebase(url: "\(URL_BASE)").childByAppendingPath("Users").childByAppendingPath(uid)
-        return user!
+    var CURRENT_USER_REF: Firebase {
+        let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+        
+        let currentUser = Firebase(url: "\(BASE_REF)").childByAppendingPath("users").childByAppendingPath(userID)
+        
+        return currentUser!
     }
     
-    // Dictionary for the signup/login provider (ex: provider : facebook)
-    // grab a reference to a path and if it does note exist, it will when we save it
-    func createFirebaseUser(uid: String, user: Dictionary<String, String>) {
-        REF_USERS.childByAppendingPath(uid).setValue(user)
+    
+    func createNewAccount(uid: String, user: Dictionary<String, String>) {
+        
+        USER_REF.childByAppendingPath(uid).setValue(user)
     }
     
 }
