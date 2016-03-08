@@ -50,6 +50,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidAppear(animated)
         
         if NSUserDefaults.standardUserDefaults().valueForKey("uid") != nil && FirebaseDataService.dataService.CURRENT_USER_REF.authData != nil {
+            print(NSUserDefaults.standardUserDefaults().valueForKey("uid"))
+            print("User logged in")
             self.performSegueWithIdentifier("loggedIn", sender: nil)
         }
     }
@@ -96,27 +98,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func loginSignupButtonTapped(sender: AnyObject) {
-        
-        print("login button tapped")
+    
+    @IBAction func loginUser() {
         if let email = textFieldEmail.text where email != "", let password = textFieldPassword.text where password != "" {
             
-            // login/authenticate a user
             FirebaseDataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
-                
                 if error != nil {
-                    
-                    print(error.code)
+                    print(error)
                     
                     if error.code == STATUS_ACCOUNT_NOTEXIST {
-                        // Create a new user account
+                        print("Account doesn't exist")
+
                         FirebaseDataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
                             
                             if error != nil {
                                 self.showErrorAlert("Could not create account", msg: "Make sure your information is correct.")
                             } else {
-                                // successfully created an account, save user id and
-                                // log in user
+ 
                                 DEFAULTS.setValue(result[KEY_UID], forKey: KEY_UID)
                                 
                                 FirebaseDataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { err, authData in
@@ -144,20 +142,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else {
             showErrorAlert("Missing Something?", msg: "You must enter an email and a password.")
         }
-        
+
     }
-    
-    //MARK: Signup
-    
-    @IBAction func signUpNewUser() {
-        self.email = textFieldEmail.text!
-        self.password = textFieldPassword.text!
-        
-        if email != "" && password != "" {
-            print("valid")
-            
-        }
-    }
+
     
     func signupErrorAlert(title: String, message: String) {
         

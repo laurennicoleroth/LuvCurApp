@@ -83,23 +83,6 @@
                                     <outlet property="delegate" destination="0OT-Or-qge" id="fzW-V6-qAG"/>
                                 </connections>
                             </textField>
-                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-pu-ZNt">
-                                <rect key="frame" x="241" y="295" width="120" height="38"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" red="0.26943403389999998" green="0.34509587470000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="19"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="loginSignupButtonTapped:" destination="0OT-Or-qge" eventType="touchUpInside" id="VHv-oK-t8P"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfg-Sb-4dc">
                                 <rect key="frame" x="216" y="314" width="168" height="38"/>
                                 <subviews>
@@ -195,11 +178,11 @@
                                     <constraint firstItem="4UG-O1-opn" firstAttribute="centerX" secondItem="tfg-Sb-4dc" secondAttribute="centerX" priority="750" id="uhP-PO-jxc"/>
                                 </constraints>
                             </view>
-                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="non-1b-13t">
-                                <rect key="frame" x="241" y="341" width="120" height="38"/>
+                            <button hidden="YES" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThO-pu-ZNt">
+                                <rect key="frame" x="241" y="295" width="120" height="38"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
-                                <state key="normal" title="SIGNUP">
+                                <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.26943403389999998" green="0.34509587470000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -209,7 +192,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="signUpNewUser" destination="0OT-Or-qge" eventType="touchUpInside" id="B13-wc-y0W"/>
+                                    <action selector="loginUser" destination="0OT-Or-qge" eventType="touchUpInside" id="CO0-Tz-kkf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,23 +201,19 @@
                         <constraints>
                             <constraint firstItem="yHK-vP-OwN" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" constant="1" id="1Tr-2p-z2y"/>
                             <constraint firstItem="LEL-kt-7IL" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" id="20L-Of-GvK"/>
-                            <constraint firstItem="non-1b-13t" firstAttribute="leading" secondItem="ThO-pu-ZNt" secondAttribute="leading" id="3Jy-Ou-htw"/>
                             <constraint firstItem="Ug7-93-Tq4" firstAttribute="top" secondItem="mdC-EE-fyZ" secondAttribute="top" constant="44" id="3Sh-PL-BfE"/>
                             <constraint firstItem="ThO-pu-ZNt" firstAttribute="top" secondItem="LEL-kt-7IL" secondAttribute="bottom" constant="25" id="4yX-jb-FAh"/>
                             <constraint firstItem="M2P-hA-CBt" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" id="634-Lh-RCY"/>
                             <constraint firstItem="tfg-Sb-4dc" firstAttribute="top" secondItem="LEL-kt-7IL" secondAttribute="bottom" constant="44" id="AP7-6p-D7G"/>
                             <constraint firstItem="M2P-hA-CBt" firstAttribute="top" secondItem="yHK-vP-OwN" secondAttribute="bottom" constant="40" id="ERk-9i-yAW"/>
-                            <constraint firstItem="non-1b-13t" firstAttribute="top" secondItem="4UG-O1-opn" secondAttribute="bottom" constant="-11" id="F2K-SQ-MCJ"/>
                             <constraint firstItem="hgx-Im-hus" firstAttribute="top" secondItem="E80-a0-l6o" secondAttribute="bottom" constant="1" id="FDS-3T-cfz"/>
                             <constraint firstItem="E80-a0-l6o" firstAttribute="top" secondItem="yHK-vP-OwN" secondAttribute="bottom" constant="40" id="Kzj-J5-evD"/>
                             <constraint firstItem="LEL-kt-7IL" firstAttribute="top" secondItem="M2P-hA-CBt" secondAttribute="bottom" constant="20" id="OYO-Tj-mkQ"/>
                             <constraint firstItem="hgx-Im-hus" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" constant="1.5" id="TL9-Uq-Zl1"/>
                             <constraint firstItem="tfg-Sb-4dc" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" id="XGV-Q9-EYo"/>
-                            <constraint firstItem="non-1b-13t" firstAttribute="trailing" secondItem="ThO-pu-ZNt" secondAttribute="trailing" id="Yv5-gn-WHw"/>
                             <constraint firstItem="E80-a0-l6o" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" id="hbn-Za-AnC"/>
                             <constraint firstItem="ThO-pu-ZNt" firstAttribute="width" secondItem="tfg-Sb-4dc" secondAttribute="width" constant="-48.5" id="iF8-hX-XSC"/>
                             <constraint firstItem="yHK-vP-OwN" firstAttribute="top" secondItem="Ug7-93-Tq4" secondAttribute="bottom" constant="8" id="jKZ-yW-Zv7"/>
-                            <constraint firstItem="non-1b-13t" firstAttribute="leading" secondItem="yHK-vP-OwN" secondAttribute="leading" id="kuV-G0-ZWA"/>
                             <constraint firstItem="ThO-pu-ZNt" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" constant="1" id="oUu-Mg-h0w"/>
                             <constraint firstItem="ThO-pu-ZNt" firstAttribute="height" secondItem="tfg-Sb-4dc" secondAttribute="height" id="pad-9C-nn1"/>
                             <constraint firstItem="Ug7-93-Tq4" firstAttribute="centerX" secondItem="mdC-EE-fyZ" secondAttribute="centerX" id="zAI-Zu-iuA"/>
@@ -253,7 +232,6 @@
                     </view>
                     <connections>
                         <outlet property="buttonLogin" destination="ThO-pu-ZNt" id="sKg-M6-P8I"/>
-                        <outlet property="buttonSignup" destination="non-1b-13t" id="J05-Ef-NmS"/>
                         <outlet property="imageViewUserPhoto" destination="E80-a0-l6o" id="BX6-gb-IEb"/>
                         <outlet property="labelUserName" destination="hgx-Im-hus" id="SY1-LE-VIH"/>
                         <outlet property="textFieldEmail" destination="M2P-hA-CBt" id="OIH-io-h0M"/>

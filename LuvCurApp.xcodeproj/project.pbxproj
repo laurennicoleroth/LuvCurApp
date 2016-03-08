@@ -22,7 +22,6 @@
 		96F987E11C88E02A00E70665 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987DB1C88E02A00E70665 /* UIView+Animation.swift */; };
 		96F987E31C88E0B600E70665 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987E21C88E0B600E70665 /* Constants.swift */; };
 		96F987E51C88E10900E70665 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987E41C88E10900E70665 /* Firebase.swift */; };
-		96F987E71C88E1A400E70665 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987E61C88E1A400E70665 /* SignupViewController.swift */; };
 		96F987E91C88E1BB00E70665 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987E81C88E1BB00E70665 /* CardsViewController.swift */; };
 		96F987EB1C88E1C900E70665 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987EA1C88E1C900E70665 /* User.swift */; };
 		96F987F41C88E1F600E70665 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987ED1C88E1F600E70665 /* CardStackView.swift */; };
@@ -76,7 +75,6 @@
 		96F987DB1C88E02A00E70665 /* UIView+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		96F987E21C88E0B600E70665 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		96F987E41C88E10900E70665 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
-		96F987E61C88E1A400E70665 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		96F987E81C88E1BB00E70665 /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		96F987EA1C88E1C900E70665 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96F987ED1C88E1F600E70665 /* CardStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				96CAB1AB1C88D5750098D151 /* LoginViewController.swift */,
-				96F987E61C88E1A400E70665 /* SignupViewController.swift */,
 				96F987E81C88E1BB00E70665 /* CardsViewController.swift */,
 			);
 			name = Controllers;
@@ -460,7 +457,6 @@
 				96F987FA1C88E1F600E70665 /* SwipeViewState.swift in Sources */,
 				96F987DC1C88E02A00E70665 /* OLNThinTextField.swift in Sources */,
 				96F987F81C88E1F600E70665 /* SwipeResult.swift in Sources */,
-				96F987E71C88E1A400E70665 /* SignupViewController.swift in Sources */,
 				96CAB1AC1C88D5750098D151 /* LoginViewController.swift in Sources */,
 				96F987DF1C88E02A00E70665 /* OLNConstans.swift in Sources */,
 				96F987DE1C88E02A00E70665 /* OLNLogoView.swift in Sources */,
