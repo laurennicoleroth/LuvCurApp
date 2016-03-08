@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		967DF3CE1C8F8D83006195EE /* ProfileMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF3CD1C8F8D83006195EE /* ProfileMenuTableViewController.swift */; };
 		96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1A91C88D5750098D151 /* AppDelegate.swift */; };
 		96CAB1AC1C88D5750098D151 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1AB1C88D5750098D151 /* LoginViewController.swift */; };
 		96CAB1AF1C88D5750098D151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CAB1AD1C88D5750098D151 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		47DEB1E450537820D681B020 /* Pods-LuvCurApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuvCurApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuvCurApp/Pods-LuvCurApp.debug.xcconfig"; sourceTree = "<group>"; };
 		859FD50A590E65A7F63442F0 /* Pods_LuvCurApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuvCurApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		967DF3CD1C8F8D83006195EE /* ProfileMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMenuTableViewController.swift; sourceTree = "<group>"; };
 		96CAB1A61C88D5750098D151 /* LuvCurApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuvCurApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CAB1A91C88D5750098D151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CAB1AB1C88D5750098D151 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				96CAB1AB1C88D5750098D151 /* LoginViewController.swift */,
 				96F987E81C88E1BB00E70665 /* CardsViewController.swift */,
+				967DF3CD1C8F8D83006195EE /* ProfileMenuTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				96F987DD1C88E02A00E70665 /* OLNGradientView.swift in Sources */,
 				96F987E11C88E02A00E70665 /* UIView+Animation.swift in Sources */,
 				96F987E91C88E1BB00E70665 /* CardsViewController.swift in Sources */,
+				967DF3CE1C8F8D83006195EE /* ProfileMenuTableViewController.swift in Sources */,
 				96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */,
 				96F987E01C88E02A00E70665 /* OLNSocialButton.swift in Sources */,
 				96F987E31C88E0B600E70665 /* Constants.swift in Sources */,
