@@ -136,46 +136,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signUpNewUser() {
         let email = textFieldEmail.text
         let password = textFieldPassword.text
+        let user_ref = FirebaseDataSingleton.ds.REF_BASE
+        print(user_ref)
         
         if email != "" && password != "" {
-            
-            FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password, withValueCompletionBlock: { error, result in
-                
-                if error != nil {
-                    print(error)
-                    
-                    self.signupErrorAlert("Oops!", message: "Having some trouble creating your account. Try again.")
-                    
-                } else {
-                    
-                    // Create and Login the New User with authUser
-                    FirebaseDataSingleton.ds.REF_BASE.authUser(email!, password: password!, withCompletionBlock: {
-                        err, authData in
-                        
-                        FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password,
-                            withValueCompletionBlock: { error, result in
-                                if error != nil {
-                                    // There was an error creating the account
-                                    print(email)
-                                    print(password)
-                                    print("There was an error creating the account: \(error)")
-                                } else {
-                                    let uid = result["uid"] as? String
-                                    print("Successfully created user account with uid: \(uid)")
-                                }
-                        })
-                    })
-                    
-                    // Store the uid for future access - handy!
-                    NSUserDefaults.standardUserDefaults().setValue(result ["uid"], forKey: "uid")
-                    
-                    // Enter the app.
-                    self.performSegueWithIdentifier("newUserLoggedIn", sender: nil)
-                }
+            user_ref.createUser(email!, password: password!,
+                withValueCompletionBlock: { error, result in
+                    if error != nil {
+                        print("There was an error creating the user: \(error)")
+                    } else {
+                        let uid = result["uid"] as? String
+                        print("Successfully created user account with uid: \(uid)")
+                        print(result)
+                    }
             })
-            
-        } else {
-            signupErrorAlert("Oops!", message: "Don't forget to enter your email and password")
         }
     }
     
