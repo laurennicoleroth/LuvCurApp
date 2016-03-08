@@ -106,10 +106,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 if error != nil {
                     
-                    print(error.code) // -8 for account does not exist
+                    print(error.code)
                     
-                    
-                    // Handle error if account doesn't exist
                     if error.code == STATUS_ACCOUNT_NOTEXIST {
                         // Create a new user account
                         FirebaseDataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
