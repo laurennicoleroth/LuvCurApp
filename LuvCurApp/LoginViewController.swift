@@ -139,8 +139,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if email != "" && password != "" {
             
-            // Set Email and Password for the New User.
-            
             FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password, withValueCompletionBlock: { error, result in
                 
                 if error != nil {
@@ -151,13 +149,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 } else {
                     
                     // Create and Login the New User with authUser
-                    FirebaseDataSingleton.ds.REF_BASE.authUser(email, password: password, withCompletionBlock: {
+                    FirebaseDataSingleton.ds.REF_BASE.authUser(email!, password: password!, withCompletionBlock: {
                         err, authData in
                         
                         FirebaseDataSingleton.ds.REF_BASE.createUser(email, password: password,
                             withValueCompletionBlock: { error, result in
                                 if error != nil {
                                     // There was an error creating the account
+                                    print(email)
+                                    print(password)
                                     print("There was an error creating the account: \(error)")
                                 } else {
                                     let uid = result["uid"] as? String
@@ -175,7 +175,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             })
             
         } else {
-            signupErrorAlert("Oops!", message: "Don't forget to enter your email, password, and a username.")
+            signupErrorAlert("Oops!", message: "Don't forget to enter your email and password")
         }
     }
     
