@@ -115,7 +115,7 @@ class CenterViewController: UIViewController
 }
 
 extension CenterViewController: SidePanelViewControllerDelegate {
-    func animalSelected(animal: Animal) {
+    func animalSelected(animal: Profile) {
 
         delegate?.collapseSidePanels!()
     }

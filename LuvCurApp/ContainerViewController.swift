@@ -90,14 +90,14 @@ extension ContainerViewController: CenterViewControllerDelegate {
   func addLeftPanelViewController() {
     if (leftViewController == nil) {
       leftViewController = UIStoryboard.leftViewController()
-      leftViewController!.animals = Animal.profileItems()
+      leftViewController!.profile_items = Profile.profileItems()
       
       addChildSidePanelController(leftViewController!)
     }
   }
   
   func addChildSidePanelController(sidePanelController: SidePanelViewController) {
-//    sidePanelController.delegate = centerViewController
+//    sidePanelController.delegate? = centerViewController
     
     view.insertSubview(sidePanelController.view, atIndex: 0)
     
@@ -108,7 +108,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
   func addRightPanelViewController() {
     if (rightViewController == nil) {
       rightViewController = UIStoryboard.rightViewController()
-      rightViewController!.animals = Animal.matchItems()
+      rightViewController!.profile_items = Profile.matchItems()
       
       addChildSidePanelController(rightViewController!)
     }

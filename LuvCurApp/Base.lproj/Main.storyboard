@@ -348,12 +348,24 @@
                                                 <constraint firstAttribute="height" constant="126" id="nmN-Lr-eHp"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-aO-iIP">
+                                            <rect key="frame" x="194" y="36" width="212" height="54"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="212" id="BoM-3M-1vG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" red="0.21566231550000001" green="1" blue="0.025146093219999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="u40-oz-ruz" firstAttribute="leading" secondItem="dL7-Ar-CLX" secondAttribute="leading" id="2cH-AQ-0K8"/>
                                         <constraint firstAttribute="bottom" secondItem="u40-oz-ruz" secondAttribute="bottom" id="Jid-oj-JsO"/>
                                         <constraint firstItem="u40-oz-ruz" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" id="MBp-Fh-pal"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="centerY" secondItem="u40-oz-ruz" secondAttribute="centerY" id="X6a-Wd-A2Y"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" constant="36" id="Xzh-xS-Pd6"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="centerX" secondItem="u40-oz-ruz" secondAttribute="centerX" id="mMe-cU-Bfg"/>
                                         <constraint firstAttribute="trailing" secondItem="u40-oz-ruz" secondAttribute="trailing" id="vt7-22-JBU"/>
                                     </constraints>
                                 </view>
