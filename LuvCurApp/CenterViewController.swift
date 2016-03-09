@@ -12,7 +12,7 @@ import Firebase
 @objc protocol CenterViewControllerDelegate {
     optional func toggleLeftPanel()
     optional func toggleRightPanel()
-    optional func collapseSidePenels()
+    optional func collapseSidePanels()
 }
 
 class CenterViewController: UIViewController
@@ -117,7 +117,7 @@ class CenterViewController: UIViewController
 extension CenterViewController: SidePanelViewControllerDelegate {
     func animalSelected(animal: Animal) {
 
-        delegate?.collapseSidePenels!()
+        delegate?.collapseSidePanels!()
     }
 }
 
