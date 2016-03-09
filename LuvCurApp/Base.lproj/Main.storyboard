@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="336" y="361"/>
         </scene>
-        <!--LuvCur-->
+        <!--Cards View Controller-->
         <scene sceneID="liw-Tt-MMW">
             <objects>
-                <viewController id="2sx-ma-XDN" customClass="CardsViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardsViewController" title="Cards View Controller" id="2sx-ma-XDN" customClass="CardsViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E7H-4K-hxl"/>
                         <viewControllerLayoutGuide type="bottom" id="4Vj-Ji-4ix"/>
@@ -287,11 +287,18 @@
                     <navigationItem key="navigationItem" title="LuvCur" id="faF-DA-jmk">
                         <barButtonItem key="leftBarButtonItem" image="btn_menu" id="srs-dL-qNk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="profileMenuButtonTapped:" destination="2sx-ma-XDN" id="zqw-yW-WgX"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="chat-header" id="fdF-dE-TWL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="matchesButtonTapped:" destination="2sx-ma-XDN" id="eSh-id-jF5"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WK7-Jg-QMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -319,7 +326,7 @@
         <!--Left View Controller-->
         <scene sceneID="ROa-x6-qpF">
             <objects>
-                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="SidePanelViewController" customModule="SlideOutNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="SidePanelViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjR-4F-gnI"/>
                         <viewControllerLayoutGuide type="bottom" id="KAj-zY-TiW"/>
@@ -335,7 +342,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID-100113060.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="u40-oz-ruz">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cards_3" translatesAutoresizingMaskIntoConstraints="NO" id="u40-oz-ruz">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="126" id="nmN-Lr-eHp"/>
@@ -351,7 +358,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="Noh-cM-Ijg" customClass="AnimalCell" customModule="SlideOutNavigation" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="Noh-cM-Ijg" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Noh-cM-Ijg" id="7CC-oA-FS5">
@@ -419,7 +426,7 @@
         <!--Right View Controller-->
         <scene sceneID="2OA-un-K15">
             <objects>
-                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="rqF-kz-J7T" customClass="SidePanelViewController" customModule="SlideOutNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="rqF-kz-J7T" customClass="SidePanelViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwA-NU-vwa"/>
                         <viewControllerLayoutGuide type="bottom" id="C3o-eR-CHt"/>
@@ -435,7 +442,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID-100137.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-NU-723">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_like_1" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-NU-723">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="126" id="EkZ-gu-b9u"/>
@@ -451,7 +458,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="uxR-8p-XZh" customClass="AnimalCell" customModule="SlideOutNavigation" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="uxR-8p-XZh" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uxR-8p-XZh" id="V1E-ey-LRi">
@@ -518,9 +525,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ID-100113060.jpg" width="400" height="359"/>
-        <image name="ID-100137.jpg" width="400" height="359"/>
+        <image name="Card_like_1" width="284" height="320"/>
         <image name="btn_menu" width="21" height="21"/>
+        <image name="cards_3" width="345" height="460"/>
         <image name="chat-header" width="29" height="23"/>
         <image name="facebook" width="76" height="76"/>
         <image name="googlePlus" width="76" height="76"/>

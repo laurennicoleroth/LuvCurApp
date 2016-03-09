@@ -9,10 +9,16 @@
 import UIKit
 import Firebase
 
+@objc protocol CenterViewControllerDelegate {
+    optional func toggleLeftPanel()
+    optional func toggleRightPanel()
+    optional func collapseSidePenels()
+}
+
 class CardsViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
-    let leftMenuWidth:CGFloat = 260
+    var delegate: CenterViewControllerDelegate
     
     var users : [User] = [
         User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
@@ -31,13 +37,23 @@ class CardsViewController: UIViewController
         cardStack.popCardViewWithFrame = self.popCardViewWithFrame
         
         self.navigationController?.navigationBar.topItem?.title = "LuvCur"
-//        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "NotoSans", size: 34)!,  NSForegroundColorAttributeName: UIColor.whiteColor()]
         
         cardStack.reloadContent()
         
         self.view.addSubview(cardStack)
     }
     
+    //MARK: Navigation actions
+    
+    @IBAction func profileMenuButtonTapped(sender: AnyObject) {
+        print("Profile button tapped")
+        delegate.toggleLeftPanel?()
+    }
+    
+    @IBAction func matchesButtonTapped(sender: AnyObject) {
+        print("matches button tapped")
+        delegate.toggleRightPanel?()
+    }
    
     //MARK: Stack Card View animation
     func popCardViewWithFrame(frame: CGRect) -> UIView? {
@@ -96,5 +112,12 @@ class CardsViewController: UIViewController
         })
     }
     
+}
+
+extension CardsViewController: SidePanelViewControllerDelegate {
+    func animalSelected(animal: Animal) {
+
+        delegate.collapseSidePanels?()
+    }
 }
 
