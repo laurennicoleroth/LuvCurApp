@@ -71,7 +71,6 @@ class AnimalCell: UITableViewCell {
   func configureForAnimal(animal: Animal) {
     animalImageView.image = animal.image
     imageNameLabel.text = animal.title
-    imageCreatorLabel.text = animal.creator
   }
   
 }

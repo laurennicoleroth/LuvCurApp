@@ -33,6 +33,7 @@
 		967DF4061C8FA124006195EE /* ID-10056667.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967DF3FB1C8FA124006195EE /* ID-10056667.jpg */; };
 		967DF4071C8FA124006195EE /* ID-1009881.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967DF3FC1C8FA124006195EE /* ID-1009881.jpg */; };
 		967DF4091C8FA2DB006195EE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF4081C8FA2DB006195EE /* ContainerViewController.swift */; };
+		967DF40B1C8FA5BB006195EE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF40A1C8FA5BB006195EE /* Profile.swift */; };
 		96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1A91C88D5750098D151 /* AppDelegate.swift */; };
 		96CAB1AC1C88D5750098D151 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1AB1C88D5750098D151 /* LoginViewController.swift */; };
 		96CAB1AF1C88D5750098D151 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96CAB1AD1C88D5750098D151 /* Main.storyboard */; };
@@ -106,6 +107,7 @@
 		967DF3FB1C8FA124006195EE /* ID-10056667.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10056667.jpg"; sourceTree = "<group>"; };
 		967DF3FC1C8FA124006195EE /* ID-1009881.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-1009881.jpg"; sourceTree = "<group>"; };
 		967DF4081C8FA2DB006195EE /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		967DF40A1C8FA5BB006195EE /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		96CAB1A61C88D5750098D151 /* LuvCurApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuvCurApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CAB1A91C88D5750098D151 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96CAB1AB1C88D5750098D151 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			children = (
 				96F987EA1C88E1C900E70665 /* User.swift */,
 				967DF3D21C8F9C28006195EE /* Animal.swift */,
+				967DF40A1C8FA5BB006195EE /* Profile.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -575,6 +578,7 @@
 				96F987F91C88E1F600E70665 /* SwipeDirection.swift in Sources */,
 				96F987F71C88E1F600E70665 /* PanState.swift in Sources */,
 				96F987EB1C88E1C900E70665 /* User.swift in Sources */,
+				967DF40B1C8FA5BB006195EE /* Profile.swift in Sources */,
 				96F987F61C88E1F600E70665 /* SwipeOptions.swift in Sources */,
 				96F987F41C88E1F600E70665 /* CardStackView.swift in Sources */,
 				96F987E51C88E10900E70665 /* Firebase.swift in Sources */,

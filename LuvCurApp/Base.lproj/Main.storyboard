@@ -442,7 +442,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Card_like_1" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-NU-723">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cards_4" translatesAutoresizingMaskIntoConstraints="NO" id="BmL-NU-723">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="126" id="EkZ-gu-b9u"/>
@@ -525,9 +525,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Card_like_1" width="284" height="320"/>
         <image name="btn_menu" width="21" height="21"/>
         <image name="cards_3" width="345" height="460"/>
+        <image name="cards_4" width="345" height="460"/>
         <image name="chat-header" width="29" height="23"/>
         <image name="facebook" width="76" height="76"/>
         <image name="googlePlus" width="76" height="76"/>
