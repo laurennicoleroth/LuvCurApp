@@ -15,10 +15,10 @@ import Firebase
     optional func collapseSidePenels()
 }
 
-class CardsViewController: UIViewController
+class CenterViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
-    var delegate: CenterViewControllerDelegate
+    var delegate: CenterViewControllerDelegate?
     
     var users : [User] = [
         User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
@@ -47,12 +47,12 @@ class CardsViewController: UIViewController
     
     @IBAction func profileMenuButtonTapped(sender: AnyObject) {
         print("Profile button tapped")
-        delegate.toggleLeftPanel?()
+        delegate!.toggleLeftPanel?()
     }
     
     @IBAction func matchesButtonTapped(sender: AnyObject) {
         print("matches button tapped")
-        delegate.toggleRightPanel?()
+        delegate!.toggleRightPanel?()
     }
    
     //MARK: Stack Card View animation
@@ -114,10 +114,10 @@ class CardsViewController: UIViewController
     
 }
 
-extension CardsViewController: SidePanelViewControllerDelegate {
+extension CenterViewController: SidePanelViewControllerDelegate {
     func animalSelected(animal: Animal) {
 
-        delegate.collapseSidePanels?()
+        delegate?.collapseSidePenels!()
     }
 }
 

@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="336" y="361"/>
         </scene>
-        <!--Cards View Controller-->
+        <!--Center View Controller-->
         <scene sceneID="liw-Tt-MMW">
             <objects>
-                <viewController storyboardIdentifier="CardsViewController" title="Cards View Controller" id="2sx-ma-XDN" customClass="CardsViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CenterViewController" title="Center View Controller" id="2sx-ma-XDN" customClass="CenterViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="E7H-4K-hxl"/>
                         <viewControllerLayoutGuide type="bottom" id="4Vj-Ji-4ix"/>
