@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 
 class Profile {
   
   let title: String
   let image: UIImage?
+  var email : String?
+  var facebookUID : String?
+    
   
   init(title: String, image: UIImage?) {
     self.title = title
@@ -20,8 +24,10 @@ class Profile {
   }
   
   class func profileItems() -> Array<Profile> {
-    return [ Profile(title: "Profile", image: UIImage(named: "ID-100113060.jpg")),
-             Profile(title: "Match Filters", image: UIImage(named: "ID-100113060.jpg"))
+    return [ Profile(title: "My Profile", image: UIImage(named: "profile-button")),
+             Profile(title: "Match Filters", image: UIImage(named: "profile-button")),
+             Profile(title: "Preferences", image: UIImage(named: "profile-button")),
+             Profile(title: "Account", image: UIImage(named: "profile-button"))
             ]
   }
   
@@ -29,4 +35,5 @@ class Profile {
     return [ Profile(title: "Matches", image: UIImage(named: "ID-10034505.jpg")),
       ]
   }
+    
 }

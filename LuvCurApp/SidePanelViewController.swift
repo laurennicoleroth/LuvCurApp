@@ -54,7 +54,7 @@ class SidePanelViewController: UIViewController {
         print(graphRequest)
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
-            self.currentUserEmail = result.valueForKey("name") as? String
+            self.usernameLabel.text = result.valueForKey("name") as? String
             
             self.currentUserFBID = result.valueForKey("id") as? String
             
@@ -66,6 +66,8 @@ class SidePanelViewController: UIViewController {
         print("no token")
     }
     
+    currentUserImage.layer.cornerRadius = self.currentUserImage.frame.size.width / 2
+    currentUserImage.clipsToBounds = true
     
     tableView.reloadData()
     
