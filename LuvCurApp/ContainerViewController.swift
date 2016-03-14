@@ -17,6 +17,7 @@ enum SlideOutState {
 
 class ContainerViewController: UIViewController {
   
+  var loginViewController: LoginViewController!
   var centerNavigationController: UINavigationController!
   var centerViewController: CenterViewController!
   
@@ -35,19 +36,43 @@ class ContainerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    centerViewController = UIStoryboard.centerViewController()
-    centerViewController.delegate = self
+    let ref = FirebaseDataService.dataService.BASE_REF
     
-    // wrap the centerViewController in a navigation controller, so we can push views to it
-    // and display bar button items in the navigation bar
-    centerNavigationController = UINavigationController(rootViewController: centerViewController)
-    view.addSubview(centerNavigationController.view)
-    addChildViewController(centerNavigationController)
+    if ref.authData != nil {
+        // user authenticated
+        print(ref.authData)
+        centerViewController = UIStoryboard.centerViewController()
+        centerViewController.delegate = self
+        
+        // wrap the centerViewController in a navigation controller, so we can push views to it
+        // and display bar button items in the navigation bar
+        centerNavigationController = UINavigationController(rootViewController: centerViewController)
+        view.addSubview(centerNavigationController.view)
+        addChildViewController(centerNavigationController)
+        
+        centerNavigationController.didMoveToParentViewController(self)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    } else {
+        print("Need to log in user.")
+        loginViewController = UIStoryboard.loginViewController()
+//        centerViewController.delegate = self
+
+        centerNavigationController = UINavigationController(rootViewController: loginViewController)
+        view.addSubview(centerNavigationController.view)
+        addChildViewController(centerNavigationController)
+        
+        centerNavigationController.didMoveToParentViewController(self)
+        
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
+        centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+
+    }
     
-    centerNavigationController.didMoveToParentViewController(self)
     
-    let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-    centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+    
+   
   }
   
 }
@@ -197,6 +222,11 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 
 private extension UIStoryboard {
   class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
+    
+
+  class func loginViewController() -> LoginViewController? {
+    return mainStoryboard().instantiateViewControllerWithIdentifier("LoginViewController") as? LoginViewController
+  }
   
   class func leftViewController() -> SidePanelViewController? {
     return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? SidePanelViewController

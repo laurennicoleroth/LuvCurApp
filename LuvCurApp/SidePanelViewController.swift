@@ -15,7 +15,9 @@ protocol SidePanelViewControllerDelegate {
 
 class SidePanelViewController: UIViewController {
   
+  @IBOutlet weak var usernameLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
+  var ref = FirebaseDataService.dataService.BASE_REF
   
   var profile_items: Array<Profile>!
   
@@ -28,9 +30,25 @@ class SidePanelViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    if ref.authData != nil {
+        // user authenticated
+        print(ref.authData)
+        usernameLabel.text = ref.authData.uid
+
+    } else {
+        // No user is signed in
+        print("no user")
+    }
+    
     tableView.reloadData()
+    
   }
   
+    @IBAction func logoutUser() {
+        print("logging out user")
+        ref.unauth()
+        performSegueWithIdentifier("userLoggedOut", sender: nil)
+    }
 }
 
 // MARK: Table View Data Source

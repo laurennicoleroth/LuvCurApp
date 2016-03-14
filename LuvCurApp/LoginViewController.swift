@@ -44,6 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         imageViewUserPhoto.layer.borderColor = UIColor.whiteColor().CGColor
         imageViewUserPhoto.layer.borderWidth = 2
         imageViewUserPhoto.layer.cornerRadius = imageViewUserPhoto.bounds.size.height / 2.0
+
     }
     
     override func viewDidAppear(animated: Bool) {

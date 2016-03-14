@@ -17,7 +17,7 @@ import Firebase
 
 class CenterViewController: UIViewController
 {
-    let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
+    let firebase = FirebaseDataService.dataService.BASE_REF
     var delegate: CenterViewControllerDelegate?
     
     var users : [User] = [
@@ -46,12 +46,12 @@ class CenterViewController: UIViewController
     //MARK: Navigation actions
     
     @IBAction func profileMenuButtonTapped(sender: AnyObject) {
-        print("Profile button tapped")
-        delegate!.toggleLeftPanel?()
+        print("toggle left panel")
+        delegate?.toggleLeftPanel!()
     }
     
     @IBAction func matchesButtonTapped(sender: AnyObject) {
-        print("matches button tapped")
+        print("toggle right panel")
         delegate!.toggleRightPanel?()
     }
    

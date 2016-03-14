@@ -29,7 +29,7 @@ class User {
     }
     
     
-    func saveToFirebase() {
+    func encodeImageToBase64() {
         var data: NSData = NSData()
         data = UIImageJPEGRepresentation(image!, 0.1)!
         let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
