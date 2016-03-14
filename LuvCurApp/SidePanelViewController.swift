@@ -31,7 +31,7 @@ class SidePanelViewController: UIViewController {
   
   struct TableView {
     struct CellIdentifiers {
-      static let AnimalCell = "AnimalCell"
+      static let ProfileCell = "ProfileCell"
     }
   }
   
@@ -93,7 +93,7 @@ extension SidePanelViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath) as! AnimalCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.ProfileCell, forIndexPath: indexPath) as! ProfileCell
     cell.configureForAnimal(profile_items[indexPath.row])
     return cell
   }
@@ -109,14 +109,13 @@ extension SidePanelViewController: UITableViewDelegate {
   
 }
 
-class AnimalCell: UITableViewCell {
+class ProfileCell: UITableViewCell {
   
-  @IBOutlet weak var animalImageView: UIImageView!
+  @IBOutlet weak var itemImageView: UIImageView!
   @IBOutlet weak var imageNameLabel: UILabel!
-  @IBOutlet weak var imageCreatorLabel: UILabel!
   
   func configureForAnimal(profile: Profile) {
-    animalImageView.image = profile.image
+    itemImageView.image = profile.image
     imageNameLabel.text = profile.title
   }
   

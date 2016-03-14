@@ -409,7 +409,7 @@
                                     </variation>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="Noh-cM-Ijg" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProfileCell" id="Noh-cM-Ijg" userLabel="ProfileCell" customClass="ProfileCell" customModule="LuvCurApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Noh-cM-Ijg" id="7CC-oA-FS5">
@@ -440,8 +440,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="animalImageView" destination="rWs-kS-n1K" id="OdW-2I-52b"/>
                                             <outlet property="imageNameLabel" destination="ZBr-WA-yBc" id="7Ov-dY-tMe"/>
+                                            <outlet property="itemImageView" destination="rWs-kS-n1K" id="CHo-Gm-HeA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -503,57 +503,6 @@
                                         <constraint firstItem="BmL-NU-723" firstAttribute="top" secondItem="5q4-kF-9UH" secondAttribute="top" id="T0z-9R-jEV"/>
                                     </constraints>
                                 </view>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="uxR-8p-XZh" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="148" width="600" height="54"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uxR-8p-XZh" id="V1E-ey-LRi">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Creator" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwK-dh-AWh">
-                                                    <rect key="frame" x="434" y="30" width="74" height="14"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="74" id="Xkv-W4-8Iv"/>
-                                                        <constraint firstAttribute="height" constant="14" id="sYU-l1-6Xc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHh-4K-Xt3">
-                                                    <rect key="frame" x="425" y="6" width="82" height="17"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="82" id="qON-mf-3rC"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8ff-EX-LNE">
-                                                    <rect key="frame" x="515" y="0.0" width="85" height="53"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="85" id="heH-SC-KPo"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8ff-EX-LNE" firstAttribute="top" secondItem="V1E-ey-LRi" secondAttribute="top" id="3Zj-Dy-tD7"/>
-                                                <constraint firstItem="8ff-EX-LNE" firstAttribute="leading" secondItem="dHh-4K-Xt3" secondAttribute="trailing" constant="8" symbolic="YES" id="4qB-YM-Qoo"/>
-                                                <constraint firstAttribute="bottom" secondItem="8ff-EX-LNE" secondAttribute="bottom" id="9YU-xq-WqQ"/>
-                                                <constraint firstItem="dHh-4K-Xt3" firstAttribute="top" secondItem="V1E-ey-LRi" secondAttribute="topMargin" constant="-2" id="IOQ-6o-hsn"/>
-                                                <constraint firstItem="8ff-EX-LNE" firstAttribute="leading" secondItem="MwK-dh-AWh" secondAttribute="trailing" constant="7" id="gtv-iv-zkd"/>
-                                                <constraint firstItem="MwK-dh-AWh" firstAttribute="top" secondItem="dHh-4K-Xt3" secondAttribute="bottom" constant="7" id="t67-vB-KXz"/>
-                                                <constraint firstAttribute="trailing" secondItem="8ff-EX-LNE" secondAttribute="trailing" id="tfR-jO-y1o"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="animalImageView" destination="8ff-EX-LNE" id="2q0-8k-auF"/>
-                                            <outlet property="imageCreatorLabel" destination="MwK-dh-AWh" id="yB9-9p-Z4p"/>
-                                            <outlet property="imageNameLabel" destination="dHh-4K-Xt3" id="54Q-Eo-IaO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="rqF-kz-J7T" id="Tk2-wA-0IA"/>
                                     <outlet property="delegate" destination="rqF-kz-J7T" id="JKx-Ad-mm9"/>
