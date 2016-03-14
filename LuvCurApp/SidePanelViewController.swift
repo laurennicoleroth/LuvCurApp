@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 @objc
 protocol SidePanelViewControllerDelegate {
@@ -17,7 +18,14 @@ class SidePanelViewController: UIViewController {
   
   @IBOutlet weak var usernameLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var currentUserImage: UIImageView!
+    
+    
   var ref = FirebaseDataService.dataService.BASE_REF
+  var currentUserName : String?
+  var currentUserEmail : String?
+  var currentUserFBID : String?
+  var currentUserPicURL : NSURL?
   
   var profile_items: Array<Profile>!
   
@@ -39,6 +47,25 @@ class SidePanelViewController: UIViewController {
         // No user is signed in
         print("no user")
     }
+    
+    if(FBSDKAccessToken.currentAccessToken() != nil) {
+        print(FBSDKAccessToken.currentAccessToken().permissions)
+        let graphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, email"])
+        print(graphRequest)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            self.currentUserEmail = result.valueForKey("name") as? String
+            
+            self.currentUserFBID = result.valueForKey("id") as? String
+            
+            let url = NSURL(string: "https://graph.facebook.com/\(self.currentUserFBID!)/picture?type=large&return_ssl_resources=1")
+//            self.imageView.image = UIImage(data: NSData(contentsOfURL: url!)!)
+            self.currentUserImage.image = UIImage(data: NSData(contentsOfURL: url!)!)
+        })
+    } else {
+        print("no token")
+    }
+    
     
     tableView.reloadData()
     

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import FBSDKLoginKit
 
 class User {
     var name : String?
@@ -15,6 +16,7 @@ class User {
     var imageURL : String?
     var image : UIImage?
     var username : String?
+    var facebookProfilePic : String?
     
     let firebaseRef = FirebaseDataService()
     
@@ -28,6 +30,11 @@ class User {
         self.username = username
     }
     
+    func getFacebookUserInfo() {
+        if(FBSDKAccessToken.currentAccessToken() != nil) {
+            print("There is a user")
+        }
+    }
     
     func encodeImageToBase64() {
         var data: NSData = NSData()

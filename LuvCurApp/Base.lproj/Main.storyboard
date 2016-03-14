@@ -343,21 +343,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cards_3" translatesAutoresizingMaskIntoConstraints="NO" id="u40-oz-ruz">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="126"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="default-user" translatesAutoresizingMaskIntoConstraints="NO" id="u40-oz-ruz">
+                                            <rect key="frame" x="218" y="0.0" width="164" height="126"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="126" id="nmN-Lr-eHp"/>
+                                                <constraint firstAttribute="width" constant="164" id="0co-pL-jDA"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0co-pL-jDA"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-aO-iIP">
-                                            <rect key="frame" x="194" y="36" width="212" height="54"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="212" id="BoM-3M-1vG"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKL-Vb-VBJ">
                                             <rect key="frame" x="8" y="8" width="48" height="30"/>
                                             <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -369,17 +365,39 @@
                                                 <segue destination="0OT-Or-qge" kind="show" identifier="userLoggedOut" id="BRd-Pj-lom"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current User's Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-aO-iIP">
+                                            <rect key="frame" x="219" y="88" width="162" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="212" id="BoM-3M-1vG"/>
+                                                <constraint firstAttribute="width" constant="162" id="Gfb-7f-WIA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.85892855420000003" green="0.1471166683" blue="0.99749447599999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="BoM-3M-1vG"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.21566231550000001" green="1" blue="0.025146093219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.85892855420000003" green="0.1471166683" blue="0.99749447599999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="u40-oz-ruz" firstAttribute="leading" secondItem="dL7-Ar-CLX" secondAttribute="leading" id="2cH-AQ-0K8"/>
-                                        <constraint firstAttribute="bottom" secondItem="u40-oz-ruz" secondAttribute="bottom" id="Jid-oj-JsO"/>
-                                        <constraint firstItem="u40-oz-ruz" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" id="MBp-Fh-pal"/>
-                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="centerY" secondItem="u40-oz-ruz" secondAttribute="centerY" id="X6a-Wd-A2Y"/>
-                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" constant="36" id="Xzh-xS-Pd6"/>
-                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="centerX" secondItem="u40-oz-ruz" secondAttribute="centerX" id="mMe-cU-Bfg"/>
-                                        <constraint firstAttribute="trailing" secondItem="u40-oz-ruz" secondAttribute="trailing" id="vt7-22-JBU"/>
+                                        <constraint firstItem="u40-oz-ruz" firstAttribute="centerX" secondItem="fnU-aO-iIP" secondAttribute="centerX" id="7w3-om-GPV"/>
+                                        <constraint firstItem="u40-oz-ruz" firstAttribute="leading" secondItem="fnU-aO-iIP" secondAttribute="trailing" constant="8" id="EVw-jK-ydT"/>
+                                        <constraint firstItem="u40-oz-ruz" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" id="GdP-Ng-rDK"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="top" secondItem="dL7-Ar-CLX" secondAttribute="top" constant="88" id="IgA-on-6uQ"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="centerX" secondItem="u40-oz-ruz" secondAttribute="centerX" id="SqD-ts-umF"/>
+                                        <constraint firstAttribute="bottom" secondItem="u40-oz-ruz" secondAttribute="bottom" id="WfT-qo-kFj"/>
+                                        <constraint firstItem="u40-oz-ruz" firstAttribute="centerX" secondItem="dL7-Ar-CLX" secondAttribute="centerX" id="wRM-Dt-YDp"/>
+                                        <constraint firstItem="fnU-aO-iIP" firstAttribute="bottom" secondItem="u40-oz-ruz" secondAttribute="bottom" id="zwa-QG-O9H"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="7w3-om-GPV"/>
+                                            <exclude reference="EVw-jK-ydT"/>
+                                        </mask>
+                                    </variation>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="Noh-cM-Ijg" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
@@ -443,13 +461,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentUserImage" destination="u40-oz-ruz" id="pBj-q6-FUY"/>
                         <outlet property="tableView" destination="Tcb-ZV-bWi" id="Ixp-Ae-a1e"/>
                         <outlet property="usernameLabel" destination="fnU-aO-iIP" id="JT5-RT-gck"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ve-qP-g4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298" y="1131"/>
+            <point key="canvasLocation" x="-273" y="1131"/>
         </scene>
         <!--Right View Controller-->
         <scene sceneID="2OA-un-K15">
@@ -561,9 +580,9 @@
     </scenes>
     <resources>
         <image name="btn_menu" width="21" height="21"/>
-        <image name="cards_3" width="345" height="460"/>
         <image name="cards_4" width="345" height="460"/>
         <image name="chat-header" width="29" height="23"/>
+        <image name="default-user" width="300" height="300"/>
         <image name="facebook" width="76" height="76"/>
         <image name="googlePlus" width="76" height="76"/>
         <image name="twitter" width="76" height="76"/>

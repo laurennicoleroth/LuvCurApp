@@ -195,6 +195,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         let user = ["provider": authData.provider!, "bio": "about me" ]
                         FirebaseDataService.dataService.createNewAccount(authData.uid, user: user)
                         
+                        
                         // move to new VC after logging in
                         self.performSegueWithIdentifier(SEGUE_LOGGEDIN, sender: nil)
                     }
