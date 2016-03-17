@@ -51,15 +51,15 @@ class CenterViewController: UIViewController
     
     //MARK: Navigation actions
     
-    @IBAction func profileMenuButtonTapped(sender: AnyObject) {
-        print("Profile button tapped")
-        delegate!.toggleLeftPanel?()
+    @IBAction func matchesButtonTapped(sender: AnyObject) {
+        delegate!.toggleRightPanel()
     }
     
-    @IBAction func matchesButtonTapped(sender: AnyObject) {
-        print("matches button tapped")
-        delegate!.toggleRightPanel?()
+    @IBAction func userMenuButtonTapped(sender: AnyObject) {
+        delegate!.toggleLeftPanel()
     }
+    
+    
    
     //MARK: Stack Card View animation
     func popCardViewWithFrame(frame: CGRect) -> UIView? {

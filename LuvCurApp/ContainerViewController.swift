@@ -38,8 +38,6 @@ class ContainerViewController: UIViewController {
     centerViewController = UIStoryboard.centerViewController()
     centerViewController.delegate = self
     
-    // wrap the centerViewController in a navigation controller, so we can push views to it
-    // and display bar button items in the navigation bar
     centerNavigationController = UINavigationController(rootViewController: centerViewController)
     view.addSubview(centerNavigationController.view)
     addChildViewController(centerNavigationController)
@@ -92,7 +90,8 @@ extension ContainerViewController: CenterViewControllerDelegate {
         leftViewController = UIStoryboard.userMenuViewController()
        leftViewController!.user_menu_items = UserMenuItem.userMenuItems()
       
-//      addChildSidePanelController(leftViewController!)
+//        UserMenuViewController.delegate? = centerViewController
+        
     }
   }
   
@@ -104,7 +103,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
 //    addChildViewController(sidePanelController)
 //    sidePanelController.didMoveToParentViewController(self)
 //  }
-  
+//  
 //  func addRightPanelViewController() {
 //    if (rightViewController == nil) {
 //      rightViewController = UIStoryboard.rightViewController()

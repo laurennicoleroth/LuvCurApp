@@ -10,7 +10,7 @@ import UIKit
 
 @objc
 protocol UserMenuViewControllerDelegate {
-
+//    func userMenuItemSelected(user_menu_item: UserMenuItem)
 }
 
 class UserMenuViewController: UIViewController {
@@ -19,28 +19,53 @@ class UserMenuViewController: UIViewController {
     var user_menu_items: Array<UserMenuItem>!
     
     struct UserMenuTableView {
-        struct CellItentifiers {
+        struct CellIdentifiers {
             static let UserMenuItemCell = "UserMenuItemCell"
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        userTableView.reloadData()
     }
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: Table View Data Source
+
+extension UserMenuViewController: UITableViewDataSource {
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return user_menu_items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(UserMenuTableView.CellIdentifiers.UserMenuItemCell, forIndexPath: indexPath) as! UserMenuItemCell
+        cell.configureForUserMenuItem(user_menu_items[indexPath.row])
+        return cell
+    }
+    
 }
 
 extension UserMenuViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
     }
     
+}
+
+class UserMenuItemCell: UITableViewCell {
+    
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var menuItemLabel: UILabel!
+    
+    
+    func configureForUserMenuItem(user_menu_item: UserMenuItem) {
+        itemImageView.image = user_menu_item.image
+        menuItemLabel.text = user_menu_item.title
+    }
 }

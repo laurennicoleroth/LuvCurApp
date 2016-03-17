@@ -288,13 +288,13 @@
                         <barButtonItem key="leftBarButtonItem" image="btn_menu" id="srs-dL-qNk">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="profileMenuButtonTapped:" destination="2sx-ma-XDN" id="zqw-yW-WgX"/>
+                                <action selector="userMenuButtonTapped:" destination="2sx-ma-XDN" id="JH0-kO-DVZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="chat-header" id="fdF-dE-TWL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <action selector="matchesButtonTapped:" destination="2sx-ma-XDN" id="eSh-id-jF5"/>
+                                <action selector="matchesButtonTapped:" destination="2sx-ma-XDN" id="v8a-TR-nS6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -370,7 +370,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnimalCell" id="Noh-cM-Ijg" customClass="AnimalCell" customModule="LuvCurApp" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserMenuItemCell" id="Noh-cM-Ijg" customClass="UserMenuItemCell" customModule="LuvCurApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="148" width="600" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Noh-cM-Ijg" id="7CC-oA-FS5">
@@ -383,12 +383,6 @@
                                                         <constraint firstAttribute="width" constant="85" id="QhB-gq-ptZ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Creator" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbh-7B-arK">
-                                                    <rect key="frame" x="93" y="30" width="74" height="14"/>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Image Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBr-WA-yBc">
                                                     <rect key="frame" x="93" y="6" width="82" height="17"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -399,17 +393,16 @@
                                             <constraints>
                                                 <constraint firstItem="rWs-kS-n1K" firstAttribute="top" secondItem="7CC-oA-FS5" secondAttribute="top" id="HPt-V1-Hdm"/>
                                                 <constraint firstItem="rWs-kS-n1K" firstAttribute="leading" secondItem="7CC-oA-FS5" secondAttribute="leading" id="IWA-tO-sxg"/>
-                                                <constraint firstItem="cbh-7B-arK" firstAttribute="top" secondItem="ZBr-WA-yBc" secondAttribute="bottom" constant="6.5" id="OTt-6F-Oy9"/>
                                                 <constraint firstItem="ZBr-WA-yBc" firstAttribute="leading" secondItem="rWs-kS-n1K" secondAttribute="trailing" constant="8" id="Pit-0c-kef"/>
                                                 <constraint firstItem="ZBr-WA-yBc" firstAttribute="top" secondItem="7CC-oA-FS5" secondAttribute="top" constant="6" id="WpC-l9-kGi"/>
                                                 <constraint firstAttribute="bottom" secondItem="rWs-kS-n1K" secondAttribute="bottom" id="kvf-fI-giZ"/>
-                                                <constraint firstItem="cbh-7B-arK" firstAttribute="leading" secondItem="ZBr-WA-yBc" secondAttribute="leading" id="xaK-vy-g1D"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="animalImageView" destination="rWs-kS-n1K" id="OdW-2I-52b"/>
-                                            <outlet property="imageCreatorLabel" destination="cbh-7B-arK" id="KqT-vO-LR9"/>
                                             <outlet property="imageNameLabel" destination="ZBr-WA-yBc" id="7Ov-dY-tMe"/>
+                                            <outlet property="itemImageView" destination="rWs-kS-n1K" id="jpu-Mu-lHj"/>
+                                            <outlet property="menuItemLabel" destination="ZBr-WA-yBc" id="vCZ-Ld-QdG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

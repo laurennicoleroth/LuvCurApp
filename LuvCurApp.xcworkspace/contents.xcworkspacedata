@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ProfileItem.swift">
-   </FileRef>
-   <FileRef
       location = "group:LuvCurApp.xcodeproj">
    </FileRef>
    <FileRef
