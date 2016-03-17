@@ -8,9 +8,9 @@
 
 import UIKit
 
-@objc
+
 protocol UserMenuViewControllerDelegate {
-//    func userMenuItemSelected(user_menu_item: UserMenuItem)
+    func userMenuItemSelected(user_menu_item: UserMenuItem)
 }
 
 class UserMenuViewController: UIViewController {
@@ -54,6 +54,8 @@ extension UserMenuViewController: UITableViewDataSource {
 extension UserMenuViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedMenuItem = user_menu_items[indexPath.row]
+//        delegate?.userMenuItemSelected(selectedMenuItem)
     }
     
 }

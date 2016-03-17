@@ -89,21 +89,22 @@ extension ContainerViewController: CenterViewControllerDelegate {
     if (leftViewController == nil) {
         leftViewController = UIStoryboard.userMenuViewController()
        leftViewController!.user_menu_items = UserMenuItem.userMenuItems()
-      
-//        UserMenuViewController.delegate? = centerViewController
+        
+        addChildSidePanelController(leftViewController!)
         
     }
   }
+    
   
-//  func addChildSidePanelController(sidePanelController: SidePanelViewController) {
-////    sidePanelController.delegate? = centerViewController
-//    
-//    view.insertSubview(sidePanelController.view, atIndex: 0)
-//    
-//    addChildViewController(sidePanelController)
-//    sidePanelController.didMoveToParentViewController(self)
-//  }
-//  
+  func addChildSidePanelController(sidePanelController: UserMenuViewController) {
+//    sidePanelController.delegate = centerViewController
+    
+    view.insertSubview(sidePanelController.view, atIndex: 0)
+    
+    addChildViewController(sidePanelController)
+    sidePanelController.didMoveToParentViewController(self)
+  }
+  
 //  func addRightPanelViewController() {
 //    if (rightViewController == nil) {
 //      rightViewController = UIStoryboard.rightViewController()
