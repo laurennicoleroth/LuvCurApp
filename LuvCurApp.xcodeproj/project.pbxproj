@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		967DF3D51C8F9C28006195EE /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF3D11C8F9C28006195EE /* SidePanelViewController.swift */; };
-		967DF3D61C8F9C28006195EE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF3D21C8F9C28006195EE /* Profile.swift */; };
 		967DF3D91C8FA0E6006195EE /* ID-10029135.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967DF3D81C8FA0E6006195EE /* ID-10029135.jpg */; };
 		967DF3E71C8FA112006195EE /* ID-100113060.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967DF3DC1C8FA112006195EE /* ID-100113060.jpg */; };
 		967DF3E81C8FA112006195EE /* ID-10011404.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 967DF3DD1C8FA112006195EE /* ID-10011404.jpg */; };
@@ -41,6 +39,8 @@
 		96CAB1BF1C88D5760098D151 /* LuvCurAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1BE1C88D5760098D151 /* LuvCurAppTests.swift */; };
 		96CAB1CA1C88D5760098D151 /* LuvCurAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CAB1C91C88D5760098D151 /* LuvCurAppUITests.swift */; };
 		96DBAF4F1C9B2D840002C506 /* UserMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DBAF4E1C9B2D840002C506 /* UserMenuViewController.swift */; };
+		96DBAF511C9B31990002C506 /* UserMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DBAF501C9B31990002C506 /* UserMenuItem.swift */; };
+		96DBAF531C9B35310002C506 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DBAF521C9B35310002C506 /* MatchesViewController.swift */; };
 		96F987DC1C88E02A00E70665 /* OLNThinTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987D61C88E02A00E70665 /* OLNThinTextField.swift */; };
 		96F987DD1C88E02A00E70665 /* OLNGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987D71C88E02A00E70665 /* OLNGradientView.swift */; };
 		96F987DE1C88E02A00E70665 /* OLNLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F987D81C88E02A00E70665 /* OLNLogoView.swift */; };
@@ -81,8 +81,6 @@
 /* Begin PBXFileReference section */
 		47DEB1E450537820D681B020 /* Pods-LuvCurApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuvCurApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuvCurApp/Pods-LuvCurApp.debug.xcconfig"; sourceTree = "<group>"; };
 		859FD50A590E65A7F63442F0 /* Pods_LuvCurApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuvCurApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		967DF3D11C8F9C28006195EE /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
-		967DF3D21C8F9C28006195EE /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		967DF3D81C8FA0E6006195EE /* ID-10029135.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10029135.jpg"; sourceTree = "<group>"; };
 		967DF3DC1C8FA112006195EE /* ID-100113060.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-100113060.jpg"; sourceTree = "<group>"; };
 		967DF3DD1C8FA112006195EE /* ID-10011404.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ID-10011404.jpg"; sourceTree = "<group>"; };
@@ -121,6 +119,8 @@
 		96CAB1C91C88D5760098D151 /* LuvCurAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuvCurAppUITests.swift; sourceTree = "<group>"; };
 		96CAB1CB1C88D5760098D151 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96DBAF4E1C9B2D840002C506 /* UserMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuViewController.swift; sourceTree = "<group>"; };
+		96DBAF501C9B31990002C506 /* UserMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserMenuItem.swift; sourceTree = "<group>"; };
+		96DBAF521C9B35310002C506 /* MatchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesViewController.swift; sourceTree = "<group>"; };
 		96F987D61C88E02A00E70665 /* OLNThinTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNThinTextField.swift; sourceTree = "<group>"; };
 		96F987D71C88E02A00E70665 /* OLNGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNGradientView.swift; sourceTree = "<group>"; };
 		96F987D81C88E02A00E70665 /* OLNLogoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OLNLogoView.swift; sourceTree = "<group>"; };
@@ -316,8 +316,8 @@
 				96CAB1AB1C88D5750098D151 /* LoginViewController.swift */,
 				96F987E81C88E1BB00E70665 /* CenterViewController.swift */,
 				967DF4081C8FA2DB006195EE /* ContainerViewController.swift */,
-				967DF3D11C8F9C28006195EE /* SidePanelViewController.swift */,
 				96DBAF4E1C9B2D840002C506 /* UserMenuViewController.swift */,
+				96DBAF521C9B35310002C506 /* MatchesViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -325,8 +325,8 @@
 		96F987D41C88DC4900E70665 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				96DBAF501C9B31990002C506 /* UserMenuItem.swift */,
 				96F987EA1C88E1C900E70665 /* User.swift */,
-				967DF3D21C8F9C28006195EE /* Profile.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -587,16 +587,16 @@
 				96F987F81C88E1F600E70665 /* SwipeResult.swift in Sources */,
 				96CAB1AC1C88D5750098D151 /* LoginViewController.swift in Sources */,
 				96F987DF1C88E02A00E70665 /* OLNConstans.swift in Sources */,
+				96DBAF511C9B31990002C506 /* UserMenuItem.swift in Sources */,
 				96F987DE1C88E02A00E70665 /* OLNLogoView.swift in Sources */,
 				96F987DD1C88E02A00E70665 /* OLNGradientView.swift in Sources */,
 				967DF4091C8FA2DB006195EE /* ContainerViewController.swift in Sources */,
 				96F987E11C88E02A00E70665 /* UIView+Animation.swift in Sources */,
-				967DF3D61C8F9C28006195EE /* Profile.swift in Sources */,
 				96F987E91C88E1BB00E70665 /* CenterViewController.swift in Sources */,
+				96DBAF531C9B35310002C506 /* MatchesViewController.swift in Sources */,
 				96CAB1AA1C88D5750098D151 /* AppDelegate.swift in Sources */,
 				96DBAF4F1C9B2D840002C506 /* UserMenuViewController.swift in Sources */,
 				96F987E01C88E02A00E70665 /* OLNSocialButton.swift in Sources */,
-				967DF3D51C8F9C28006195EE /* SidePanelViewController.swift in Sources */,
 				96F987E31C88E0B600E70665 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

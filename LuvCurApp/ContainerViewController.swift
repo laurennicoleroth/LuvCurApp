@@ -28,7 +28,7 @@ class ContainerViewController: UIViewController {
   }
   
   var leftViewController: UserMenuViewController?
-  var rightViewController: SidePanelViewController?
+  var rightViewController: MatchesViewController?
 
   let centerPanelExpandedOffset: CGFloat = 60
   
@@ -70,7 +70,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
     let notAlreadyExpanded = (currentState != .RightPanelExpanded)
     
     if notAlreadyExpanded {
-      addRightPanelViewController()
+//      addRightPanelViewController()
     }
     
     animateRightPanel(shouldExpand: notAlreadyExpanded)
@@ -90,29 +90,29 @@ extension ContainerViewController: CenterViewControllerDelegate {
   func addLeftPanelViewController() {
     if (leftViewController == nil) {
         leftViewController = UIStoryboard.userMenuViewController()
-//      leftViewController!.profile_items = Profile.profileItems()
+       leftViewController!.user_menu_items = UserMenuItem.userMenuItems()
       
 //      addChildSidePanelController(leftViewController!)
     }
   }
   
-  func addChildSidePanelController(sidePanelController: SidePanelViewController) {
-//    sidePanelController.delegate? = centerViewController
-    
-    view.insertSubview(sidePanelController.view, atIndex: 0)
-    
-    addChildViewController(sidePanelController)
-    sidePanelController.didMoveToParentViewController(self)
-  }
+//  func addChildSidePanelController(sidePanelController: SidePanelViewController) {
+////    sidePanelController.delegate? = centerViewController
+//    
+//    view.insertSubview(sidePanelController.view, atIndex: 0)
+//    
+//    addChildViewController(sidePanelController)
+//    sidePanelController.didMoveToParentViewController(self)
+//  }
   
-  func addRightPanelViewController() {
-    if (rightViewController == nil) {
-      rightViewController = UIStoryboard.rightViewController()
-      rightViewController!.profile_items = Profile.matchItems()
-      
-      addChildSidePanelController(rightViewController!)
-    }
-  }
+//  func addRightPanelViewController() {
+//    if (rightViewController == nil) {
+//      rightViewController = UIStoryboard.rightViewController()
+//      rightViewController!.profile_items = Profile.matchItems()
+//      
+//      addChildSidePanelController(rightViewController!)
+//    }
+//  }
   
   func animateLeftPanel(shouldExpand shouldExpand: Bool) {
     if (shouldExpand) {
@@ -172,7 +172,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
         if (gestureIsDraggingFromLeftToRight) {
           addLeftPanelViewController()
         } else {
-          addRightPanelViewController()
+//          addRightPanelViewController()
         }
         
         showShadowForCenterViewController(true)
@@ -202,8 +202,8 @@ private extension UIStoryboard {
     return mainStoryboard().instantiateViewControllerWithIdentifier("UserMenuViewController") as? UserMenuViewController
   }
   
-  class func rightViewController() -> SidePanelViewController? {
-    return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? SidePanelViewController
+  class func matchesController() -> MatchesViewController? {
+    return mainStoryboard().instantiateViewControllerWithIdentifier("MatchesViewController") as? MatchesViewController
   }
   
   class func centerViewController() -> CenterViewController? {

@@ -439,7 +439,7 @@
         <!--Right View Controller-->
         <scene sceneID="2OA-un-K15">
             <objects>
-                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="rqF-kz-J7T" customClass="SidePanelViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RightViewController" title="Right View Controller" id="rqF-kz-J7T" customClass="MatchesViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dwA-NU-vwa"/>
                         <viewControllerLayoutGuide type="bottom" id="C3o-eR-CHt"/>

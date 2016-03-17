@@ -8,8 +8,21 @@
 
 import UIKit
 
+@objc
+protocol UserMenuViewControllerDelegate {
+
+}
+
 class UserMenuViewController: UIViewController {
     @IBOutlet weak var userTableView: UITableView!
+    
+    var user_menu_items: Array<UserMenuItem>!
+    
+    struct UserMenuTableView {
+        struct CellItentifiers {
+            static let UserMenuItemCell = "UserMenuItemCell"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,4 +35,12 @@ class UserMenuViewController: UIViewController {
     }
     
 
+}
+
+extension UserMenuViewController: UITableViewDelegate {
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
 }

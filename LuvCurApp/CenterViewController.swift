@@ -27,6 +27,12 @@ class CenterViewController: UIViewController
         User(name: "Kate Night", bio: "Actor", image: UIImage(named: "cards_4")!, username: "katenight"),
         User(name: "Sheldon Cooper", bio: "Actor", image: UIImage(named: "cards_5")!, username: "sheldoncooper"),
         User(name: "Default Person", bio: "Actor", image: UIImage(named: "default-user")!, username: "defaultperson"),
+        User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
+        User(name: "Megan Fox", bio: "Actor", image: UIImage(named: "cards_2")!, username: "meganfox"),
+        User(name: "Jesse Pinkman", bio: "Actor", image: UIImage(named: "cards_3")!, username: "jessepinkman"),
+        User(name: "Kate Night", bio: "Actor", image: UIImage(named: "cards_4")!, username: "katenight"),
+        User(name: "Sheldon Cooper", bio: "Actor", image: UIImage(named: "cards_5")!, username: "sheldoncooper"),
+        User(name: "Default Person", bio: "Actor", image: UIImage(named: "default-user")!, username: "defaultperson")
         ]
     
     //MARK: View Lifecycle
@@ -114,9 +120,9 @@ class CenterViewController: UIViewController
     
 }
 
-extension CenterViewController: SidePanelViewControllerDelegate {
-    func animalSelected(animal: Profile) {
 
+extension CenterViewController: UserMenuViewControllerDelegate {
+    func userMenuItemSelected(item: UserMenuItem) {
         delegate?.collapseSidePanels!()
     }
 }
