@@ -27,7 +27,7 @@ class ContainerViewController: UIViewController {
     }
   }
   
-  var leftViewController: SidePanelViewController?
+  var leftViewController: UserMenuViewController?
   var rightViewController: SidePanelViewController?
 
   let centerPanelExpandedOffset: CGFloat = 60
@@ -89,10 +89,10 @@ extension ContainerViewController: CenterViewControllerDelegate {
   
   func addLeftPanelViewController() {
     if (leftViewController == nil) {
-      leftViewController = UIStoryboard.leftViewController()
-      leftViewController!.profile_items = Profile.profileItems()
+        leftViewController = UIStoryboard.userMenuViewController()
+//      leftViewController!.profile_items = Profile.profileItems()
       
-      addChildSidePanelController(leftViewController!)
+//      addChildSidePanelController(leftViewController!)
     }
   }
   
@@ -198,8 +198,8 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 private extension UIStoryboard {
   class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
   
-  class func leftViewController() -> SidePanelViewController? {
-    return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? SidePanelViewController
+  class func userMenuViewController() -> UserMenuViewController? {
+    return mainStoryboard().instantiateViewControllerWithIdentifier("UserMenuViewController") as? UserMenuViewController
   }
   
   class func rightViewController() -> SidePanelViewController? {

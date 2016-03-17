@@ -326,7 +326,7 @@
         <!--Left View Controller-->
         <scene sceneID="ROa-x6-qpF">
             <objects>
-                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="SidePanelViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserMenuViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="UserMenuViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjR-4F-gnI"/>
                         <viewControllerLayoutGuide type="bottom" id="KAj-zY-TiW"/>
@@ -429,6 +429,7 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Tcb-ZV-bWi" id="Ixp-Ae-a1e"/>
+                        <outlet property="userTableView" destination="Tcb-ZV-bWi" id="SNj-JX-iG1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ve-qP-g4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
