@@ -52,11 +52,13 @@ class CenterViewController: UIViewController
     //MARK: Navigation actions
     
     @IBAction func matchesButtonTapped(sender: AnyObject) {
-        delegate!.toggleRightPanel()
+        print("matches button tapped")
+        delegate?.toggleRightPanel?()
     }
     
     @IBAction func userMenuButtonTapped(sender: AnyObject) {
-        delegate!.toggleLeftPanel()
+        print("user menu button tapped")
+        delegate?.toggleLeftPanel?()
     }
     
     
@@ -118,12 +120,5 @@ class CenterViewController: UIViewController
         })
     }
     
-}
-
-
-extension CenterViewController: UserMenuViewControllerDelegate {
-    func userMenuItemSelected(item: UserMenuItem) {
-        delegate?.collapseSidePanels!()
-    }
 }
 
