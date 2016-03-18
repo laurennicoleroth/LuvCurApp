@@ -15,18 +15,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    private func createMenuView() {
+        
+        // create viewController code...
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier("LeftViewController") as! LeftViewController
+        let rightViewController = storyboard.instantiateViewControllerWithIdentifier("RightViewController") as! RightViewController
+        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        leftViewController.mainViewController = nvc
+        
+        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+        
+        self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.createMenuView()
         
-        let containerViewController = ContainerViewController()
-        
-        window!.rootViewController = containerViewController
-        window!.makeKeyAndVisible()
-        
-        return FBSDKApplicationDelegate.sharedInstance()
-            .application(application, didFinishLaunchingWithOptions: launchOptions)
-        
+        return true
     }
     
     func applicationWillResignActive(application: UIApplication) {
@@ -45,22 +58,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        // Activate Facebook when app becomes active
-        FBSDKAppEvents.activateApp()
     }
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Saves changes in the application's managed object context before the application terminates.
+//        self.saveContext()
     }
     
-    // Implement this function, which is used with our query schemas
-    func application(application: UIApplication, openURL url: NSURL,
-        sourceApplication: String?, annotation: AnyObject) -> Bool {
-            
-            return FBSDKApplicationDelegate.sharedInstance()
-                .application(application, openURL: url,
-                    sourceApplication: sourceApplication, annotation: annotation)
-    }
+    // MARK: - Core Data stack
+    
+    lazy var applicationDocumentsDirectory: NSURL = {
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "dekatotoro.test11" in the application's documents Application Support directory.
+        let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
+        return urls[urls.count-1]
+    }()
+    
 
 
 }

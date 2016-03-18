@@ -9,16 +9,10 @@
 import UIKit
 import Firebase
 
-@objc protocol CenterViewControllerDelegate {
-    optional func toggleLeftPanel()
-    optional func toggleRightPanel()
-    optional func collapseSidePanels()
-}
-
 class CenterViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
-    var delegate: CenterViewControllerDelegate?
+
     
     var users : [User] = [
         User(name: "Hugh Laurie", bio: "Actor", image: UIImage(named: "cards_1")!, username: "hughlaurie"),
@@ -42,18 +36,7 @@ class CenterViewController: UIViewController
         
         self.view.addSubview(cardStack)
     }
-    
-    //MARK: Navigation actions
-    
-    @IBAction func profileMenuButtonTapped(sender: AnyObject) {
-        print("Profile button tapped")
-        delegate!.toggleLeftPanel?()
-    }
-    
-    @IBAction func matchesButtonTapped(sender: AnyObject) {
-        print("matches button tapped")
-        delegate!.toggleRightPanel?()
-    }
+
    
     //MARK: Stack Card View animation
     func popCardViewWithFrame(frame: CGRect) -> UIView? {
@@ -112,12 +95,5 @@ class CenterViewController: UIViewController
         })
     }
     
-}
-
-extension CenterViewController: SidePanelViewControllerDelegate {
-    func animalSelected(animal: Profile) {
-
-        delegate?.collapseSidePanels!()
-    }
 }
 
