@@ -326,7 +326,7 @@
         <!--Left View Controller-->
         <scene sceneID="ROa-x6-qpF">
             <objects>
-                <viewController storyboardIdentifier="UserMenuViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="UserMenuViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftViewController" title="Left View Controller" id="XDn-Qz-Unx" customClass="UserMenuViewController" customModule="LuvCurApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjR-4F-gnI"/>
                         <viewControllerLayoutGuide type="bottom" id="KAj-zY-TiW"/>
@@ -377,7 +377,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-kS-n1K">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-kS-n1K" userLabel="Menu Item Image">
                                                     <rect key="frame" x="0.0" y="0.0" width="85" height="53"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="85" id="QhB-gq-ptZ"/>

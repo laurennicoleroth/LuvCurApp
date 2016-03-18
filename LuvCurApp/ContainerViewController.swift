@@ -19,7 +19,7 @@ class ContainerViewController: UIViewController {
   
   var centerNavigationController: UINavigationController!
   var centerViewController: CenterViewController!
-  
+    
   var currentState: SlideOutState = .BothCollapsed {
     didSet {
       let shouldShowShadow = currentState != .BothCollapsed
@@ -59,6 +59,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
     
     if notAlreadyExpanded {
       addLeftPanelViewController()
+
     }
     
     animateLeftPanel(shouldExpand: notAlreadyExpanded)
@@ -87,32 +88,16 @@ extension ContainerViewController: CenterViewControllerDelegate {
   
   func addLeftPanelViewController() {
     if (leftViewController == nil) {
-        leftViewController = UIStoryboard.userMenuViewController()
-       leftViewController!.user_menu_items = UserMenuItem.userMenuItems()
+        leftViewController = UIStoryboard.leftViewController()
+        leftViewController!.user_menu_items = UserMenuItem.userMenuItems()
         
-        addChildSidePanelController(leftViewController!)
+        leftViewController?.delegate = centerViewController
         
+
     }
   }
-    
-  
-  func addChildSidePanelController(sidePanelController: UserMenuViewController) {
-//    sidePanelController.delegate = centerViewController
-    
-    view.insertSubview(sidePanelController.view, atIndex: 0)
-    
-    addChildViewController(sidePanelController)
-    sidePanelController.didMoveToParentViewController(self)
-  }
-  
-//  func addRightPanelViewController() {
-//    if (rightViewController == nil) {
-//      rightViewController = UIStoryboard.rightViewController()
-//      rightViewController!.profile_items = Profile.matchItems()
-//      
-//      addChildSidePanelController(rightViewController!)
-//    }
-//  }
+
+
   
   func animateLeftPanel(shouldExpand shouldExpand: Bool) {
     if (shouldExpand) {
@@ -196,18 +181,18 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
 }
 
 private extension UIStoryboard {
-  class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
-  
-  class func userMenuViewController() -> UserMenuViewController? {
-    return mainStoryboard().instantiateViewControllerWithIdentifier("UserMenuViewController") as? UserMenuViewController
-  }
-  
-  class func matchesController() -> MatchesViewController? {
-    return mainStoryboard().instantiateViewControllerWithIdentifier("MatchesViewController") as? MatchesViewController
-  }
-  
-  class func centerViewController() -> CenterViewController? {
-    return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterViewController
-  }
+    class func mainStoryboard() -> UIStoryboard { return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle()) }
+    
+    class func leftViewController() -> UserMenuViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("LeftViewController") as? UserMenuViewController
+    }
+    
+    class func rightViewController() -> MatchesViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("RightViewController") as? MatchesViewController
+    }
+    
+    class func centerViewController() -> CenterViewController? {
+        return mainStoryboard().instantiateViewControllerWithIdentifier("CenterViewController") as? CenterViewController
+    }
   
 }

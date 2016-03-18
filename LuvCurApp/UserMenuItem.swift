@@ -21,7 +21,7 @@ class UserMenuItem {
     
     class func userMenuItems() -> Array<UserMenuItem> {
         return [ UserMenuItem(title: "Profile", image: UIImage(named: "ID-100113060.jpg")),
-            UserMenuItem(title: "Match Filters", image: UIImage(named: "ID-100113060.jpg"))
+                 UserMenuItem(title: "Match Filters", image: UIImage(named: "ID-100113060.jpg"))
         ]
     }
   

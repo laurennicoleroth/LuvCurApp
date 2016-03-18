@@ -18,6 +18,7 @@ import Firebase
 class CenterViewController: UIViewController
 {
     let firebase = Firebase(url:"https://luvcurapp.firebaseio.com")
+    
     var delegate: CenterViewControllerDelegate?
     
     var users : [User] = [
@@ -120,5 +121,13 @@ class CenterViewController: UIViewController
         })
     }
     
+}
+
+extension CenterViewController: UserMenuViewControllerDelegate {
+    func userMenuItemSelected(user_menu_item: UserMenuItem) {
+        print(user_menu_item)
+        
+        delegate?.collapseSidePanels?()
+    }
 }
 

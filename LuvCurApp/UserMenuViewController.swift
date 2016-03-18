@@ -15,6 +15,7 @@ protocol UserMenuViewControllerDelegate {
 
 class UserMenuViewController: UIViewController {
     @IBOutlet weak var userTableView: UITableView!
+    var delegate: UserMenuViewControllerDelegate?
     
     var user_menu_items: Array<UserMenuItem>!
     
@@ -55,7 +56,7 @@ extension UserMenuViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let selectedMenuItem = user_menu_items[indexPath.row]
-//        delegate?.userMenuItemSelected(selectedMenuItem)
+        delegate?.userMenuItemSelected(selectedMenuItem)
     }
     
 }
