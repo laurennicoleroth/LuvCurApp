@@ -108,7 +108,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
   func addRightPanelViewController() {
     if (rightViewController == nil) {
       rightViewController = UIStoryboard.rightViewController()
-      rightViewController!.profile_items = Profile.matchItems()
+//      rightViewController!.profile_items = Profile.matchItems()
       
       addChildSidePanelController(rightViewController!)
     }
